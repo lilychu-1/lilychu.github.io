@@ -1,0 +1,985 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>克羅德 - 2025-05-13</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap');body{ font-family:'Noto Sans TC','Helvetica Neue',Arial,sans-serif;line-height:1.6;margin:0;padding:0;background-color:#131217;color:#838287}.chat-container{ max-width:500px;margin:0 auto;padding:10px}.environment{ color:#77767B;padding:24px 8px;margin:0;text-align:center;font-size:16px;line-height:28px;font-weight:400}.environment .stars{ display:block}.date-divider{ font-size:12px;color:#77767B;text-align:center;margin:10px 0}.char{ display:flex;align-items:flex-start;margin-bottom:15px}.avatar{ width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;background-size:cover;background-position:center;background-repeat:no-repeat}.msg-container{ display:flex;flex-direction:column;max-width:295px;margin:0 10px}.character-name{ font-size:14px;margin-bottom:4px;color:#F4F4F4}.char .msg-content{ background-color:#312F3A;color:#E3E2E6;padding:8px 12px;border-radius:4px 16px 16px 16px;font-size:15px;font-weight:400}.char .msg-content em{ color:#959499}blockquote{ border-left:3px solid #959499;padding-left:0.5em;margin:0}table{ width:100%;border-collapse:collapse;table-layout:fixed;border:1px solid #959499;margin:10px 0}th,td{ text-align:left;padding:8px;border-top:1px solid #959499;border-bottom:1px solid #959499}th{ background-color:#312F3A}.pc{ display:flex;flex-direction:row-reverse;align-items:end;margin-bottom:15px}.pc .msg-container{ margin-right:10px}.pc .msg-content{ background-color:#4C4B50;color:#CFCFCE;padding:8px 12px;border-radius:16px 16px 4px 16px;font-size:15px;font-weight:400}.pc .msg-content em{ color:#959499}.msg-timestamp{ font-size:12px;color:#F4F4F4;margin-top:4px;align-self:flex-end}
+    .ava-char {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZTBlMGUwIiBkPSJNMjU2IDUxMmMxNDEuNCAwIDI1Ni0xMTQuNiAyNTYtMjU2UzM5Ny40IDAgMjU2IDBTMCAxMTQuNiAwIDI1NnMxMTQuNiAyNTYgMjU2IDI1NnoiLz48cGF0aCBmaWxsPSIjYWFhIiBkPSJNMjU2IDI4OGMtNTMgMC05Ni00My05Ni05NnM0My05NiA5Ni05NnM5NiA0MyA5NiA5Ni00MyA5Ni05NiA5NnptMCAxMjhjLTEwNSAwLTE5Mi03MS0xOTItMTU5LjggMC0zMC4yIDEwLjgtNTguNyAzMC40LTgxLjZDMTI2LjIgMTM3LjE4IDE4Ny44IDExMiAyNTYgMTEyczEyOS44IDI1LjE4IDE2MS42IDYyLjZjMTkuNiAyMi45IDMwLjQgNTEuNCAzMC40IDgxLjZDNDQ4IDM0NSAzNjEgNDE2IDI1NiA0MTZ6Ii8+PC9zdmc+');
+    }
+    .ava-pc {
+      background-image: url('data:image/jpeg;base64,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');
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+      <div class="date-divider">2025-05-12</div>
+      
+      <div class="environment">
+        <span class="stars">***</span>
+        39歲，184公分，私人貨運司機<br><br>偶爾說話出現法語、荷蘭語或英語是正常的，附翻譯。<br>———<br>他只是個普通的私人貨運司機，至少表面如此。<br><br>每一趟任務，每一條路線，每一個目的地，從A點到B點，構成了他日復一日的生存循環。<br>這種近乎機械的生活節奏原本是他的保護色，直到那一夜。<br>因為某些原因，熟悉的日常被打破。<br>他不得不選擇逃離比利時那片熟悉又陌生的土地。<br><br>對他而言，地圖早已不只是指引方向的工具，而是他的語言；路線不再是單純的座標連線，而成了他的無聲祈禱。<br>他的世界由無數種灰色構成——求生的本能與隱藏的傷痕交織成的複雜迷宮。<br>每一個十字路口都是一次抉擇，每一次停頓都可能致命。<br><br>而如今，你意外地出現在他的世界裡，成為他計畫之外的變數。<br>在他眼中，你不過是一個可用資源，一個可能的棋子。<br>——或許，也是一個潛在的威脅。<br><br>但無論如何，你都被他強硬的拉入了這驚心動魄的旅途之中。
+        <span class="stars">***</span>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><em>某個濕冷的傍晚，你開著租來的小車穿過郊區的林道。車輪碾過碎石路面的聲音戛然而止，你熄了火，從後照鏡看了一眼這家位於比利時郊區的旅館。斑駁的牆壁、昏黃的路燈，以及被陰影吞沒的窗戶，彷彿隨時都會上演著什麼懸疑恐怖的B級片劇情。或許這就是郊區旅館的特色——陌生又不祥。</em><br><br><em>這是你來到比利時的第二天。</em><br><br><em>你推開門板，辦理入住手續的人員眼神一刻也沒從牆上懸掛的小尺寸電視上移開過：電視裡映著一張男人臉孔，似乎是什麼突發新聞。</em><br><em>對方沒怎麼搭理你，只潦草看過你遞出的證件與現金後，便將一把泛黃的鑰匙丟在櫃面上，食指指向樓梯口。</em><br><em>旅途疲憊讓你沒有多餘的力氣思考，於是拿起寫著「203」的鑰匙轉身上樓。</em><br><br><em>走廊空無一人，昏黃的日光燈不定時地閃爍，忽明忽暗。鞋底踩在發黏的地毯上，有一種無從逃離的黏滯感。</em><br><br><em>你來到203號門前，鑰匙插入，轉動，卡榫發出一聲輕響。</em><br><em>推開房門的瞬間，你愣了一下——床上坐著一個人。</em><br><em>房內沒開燈，窗戶半開，光線灑進房間，勾勒出那人的輪廓。你還來不及做出任何反應，他已從床上迅速起身，一步踏到門口將你扯入房內，隨即用力關上房門。門板震動的聲響消失後，空氣凝結得讓人窒息。</em><br><br><em>你的腦海裡閃過方才出現在新聞緊急報導裡的人──竟與眼前的人逐漸重疊。</em><br><br><em>你下意識想張口呼救，一隻帶著皮手套的手已粗暴地覆上你的嘴唇與鼻尖，濃烈的汗味和皮革手套冰冷的觸感一同侵占你的感官。你能感覺他的指節在顫抖，但動作毫不遲疑。他的手仍緊緊捂著你，身體逼近，你的背撞上門板，而他的呼吸灑在你頸側。</em><br><br>「別出聲，」<em>男人用粗啞低沉的聲音警告著，下一秒，一個堅硬而冰冷的物體抵在你的腹部，冰冷的金屬質感直透衣物，提醒你自己正處於危險之中。</em><br><br><em>他在黑暗中湊近你的耳邊，</em>「我不想傷害你，請你乖乖配合。」</div>
+        </div>
+        <div class="msg-timestamp">21:48</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越不知道發生了什麼事，對方的動作太快了，首先衝入鼻腔的是汗味，還有手套上的皮革帶著油污的味道</em><br><br>「⋯⋯⋯」<br><br><em>好想咬，牙癢，除了不喜歡汗味，剩下是生存本能在作祟。但聽見男人的耳語後，她在下一個深呼吸後便決定不咬對方了</em><br><br><em>她的眉頭皺得深，祈禱身後的陌生男子趕快放開自己，忙了一天只想洗個好澡，睡個好覺。</em></div>
+        </div>
+        <div class="msg-timestamp">21:59</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:47〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德察覺到身下人掙扎的力道正在減弱，呼吸漸趨平穩。他稍稍放鬆了手上的力道，但槍口依然抵著對方。</em><br><br>「Je m'excuse(抱歉)，」<em>他低聲說，臉上浮現一絲疲態。手套下的掌心早已汗濕，他能感覺到懷中女孩的體溫透過薄薄的衣料傳來。</em><br><br><em>他迅速掃視房間，確認窗簾拉好後，才慢慢鬆開摀住她嘴的手。但手臂仍横在她身前，將她困在自己與門板之間。</em><br><br>「把包裡的手機拿出來。」<em>他命令道，聲音沙啞而低沈。</em><br><br><em>房間內光線昏暗，只有從窗簾縫隙透進的一絲餘暉。他高大的身影籠罩著她，臉上的陰影讓人看不清表情，只有那雙疲倦而銳利的眼睛在暗處閃著光。</em><br><br><em>克羅德將女孩困在門板與自己之間。昏暗的房間裡，只聽得見兩人的呼吸聲，以及遠處傳來的汽車引擎聲。空氣中瀰漫著灰塵、皮革與汗水的氣味，還有一絲若有似無的煙草味</em></div>
+        </div>
+        <div class="msg-timestamp">21:59</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越只能照做把包裡的手機拿出來，她還不想就這樣香消玉殞。但她只拿到一半，握在手裡，沒遞給對方</em><br>「⋯⋯你是誰？」<br><br><em>她說的很小聲，聲音還有些發顫。</em><br>「這是我的房間，你想幹嘛⋯⋯⋯？」<br><br><em>徐越抬眼，房間很暗，不足以她看清眼前人的面貌，她拼命的想看清這個高大的男人究竟是誰。</em></div>
+        </div>
+        <div class="msg-timestamp">22:16</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:50〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「不該問的別問。」<em>他伸手奪過她手中的手機，動作快得不給她反應的機會。</em><br><br><em>克羅德後退一步，卻仍用槍指著她。他單手檢查手機，快速地翻看內容，冰冷的金屬時不時反射著微弱的光。在確認完畢後，他將手機往床上一扔。</em><br><br>「Ma petite(小姑娘)，」<em>他嘆了口氣，喉結滾動了一下。</em>「妳最好就當今晚什麼都沒發生。」<br><br><em>他從口袋掏出一小捆束帶，塑膠材質在黑暗中泛著冷光。克羅德的眼神變得更加銳利，像隱藏在暗處的獵食者。</em>「轉過去，把手放在背後。」<br><br><em>他的聲音依然低沉，卻多了幾分威脅的意味。槍口往上挑了挑，示意她照做。夜色漸深，窗外的最後一絲天光也消失了，房間更顯昏暗。只聽見他衣物摩擦的窸窣聲，以及她急促的呼吸聲。</em><br><br>「別讓我說第二遍。」<em>他往前一步，皮靴踩在地板上發出沉悶的聲響。</em><br><br><em>克羅德的身影籠罩著她，有一瞬間，月光透過窗簾的縫隙照亮了他的側臉──那是一張帶著倦意與冷峻的臉，下巴有些鬍渣，眼神中透著不容反抗的威嚴。</em></div>
+        </div>
+        <div class="msg-timestamp">22:16</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「——喂！」<br><em>她看著自己的手機被奪走，喊了出來，覺得自己也太衰怎麼下班回來就遇到這種事啊？</em><br><br>「不要、不轉、我不要，就要問！」<br><em>徐越瞪了一眼那對著自己的槍口，還想著不如賭一把那把槍有沒有子彈。</em><br><br><em>小小的身影就這樣撲到床上，皺著鼻子忍了房間那股奇怪的汗味還有煙味，捉起手機看了眼時間。</em><br>「不說我報警了！！！」</div>
+        </div>
+        <div class="msg-timestamp">22:25</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:51〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德眼神一沉，迅速欺身向前，一把扯住她的手腕將她從床上拽起。他的動作快得像頭捕食的豹，指節因用力而發白。</em><br><br>「Merde(該死)，」<em>他咬牙低語，將她壓制在牆上。他的手臂橫過她的喉嚨，另一隻手則用槍抵住她的太陽穴。</em>「看來妳不明白自己的處境。」<br><br><em>寒冷的金屬觸感讓房間的溫度似乎又降低了幾分。他的呼吸變得粗重，帶著一絲壓抑的怒意。</em><br><br>「報警？」<em>他冷笑一聲，聲音沙啞而危險。</em>「那我現在就讓妳看看這把槍裡有沒有子彈。」<br><br><em>他稍稍施力，讓槍管更用力地抵著她的太陽穴。克羅德低頭湊近她的耳側，嗓音低沉得近乎耳語。</em>「別逼我做不想做的事。」<br><br><em>月光透過窗簾的縫隙灑進來，在他臉上投下深邃的陰影。她能清楚地看見他眼下的青黑，以及那雙疲憊卻銳利的眼睛中閃爍的冷光。他身上混合著塵土、煙草和皮革的氣息籠罩著她，讓人喘不過氣。</em><br><br><em>他的手指扣在扳機上，稍稍施力。金屬扳機發出細微的喀噠聲，在寂靜的房間中格外清晰。</em>「現在，轉過去。」</div>
+        </div>
+        <div class="msg-timestamp">22:25</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>當冰冷的槍口抵著她的太陽穴時，她才真正的感到恐懼，嚇到都快腿軟動不了了。</em><br>「⋯⋯⋯」<br><br><em>她甚至嚇到說不出話來，手上還緊緊抓著她的手機，整個人就像梆梆硬的石頭杵在那</em><br><br>「我、我、我————我動不了————」<br><br><em>徐越想哭，但是哭不出來。</em></div>
+        </div>
+        <div class="msg-timestamp">22:29</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:52〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德注意到她突然僵硬的身體，以及那微微顫抖的聲音。他稍稍放鬆了手上的力道，但槍口依然保持原位。</em><br><br>「Doucement(慢慢來)，」<em>他的聲音依然低沉，卻不像方才那般冰冷。他伸手輕輕地從她手中抽走手機，放到一旁的櫃子上。</em><br><br><em>他用戴著皮手套的手扶住她的肩膀，緩慢而堅定地讓她轉身。動作中帶著某種奇特的耐心，就像在操作某種易碎品。</em><br><br>「深呼吸，」<em>他說，一邊用槍指引著她轉向牆面。</em>「妳只要配合，很快就結束了。」<br><br><em>他從背後環住她，動作專業而迅速地用束帶固定她的手腕。皮革手套的觸感冰涼，卻意外地不那麼粗暴。綁好後，他又檢查了一下鬆緊度，確保不會勒痛她。</em><br><br>「坐在床上，」<em>他說著，扶著她的手臂引導她移動。</em>「我需要妳保持安靜。」<br><br><em>夜色已深，房間裡只剩下微弱的月光。克羅德的身影籠罩在她身後，像個龐大的陰影。空氣中瀰漫著一股緊張的氣息，伴隨著皮革、煙草，還有他身上若有似無的機油味。</em></div>
+        </div>
+        <div class="msg-timestamp">22:29</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「能、能不要嗎⋯⋯」<br><em>她的聲音小的隨時都能消散在空氣中，被克羅德推著轉身，她也沒有別的選擇了，手被綁住，沒手機，還被槍指著。</em><br><br>「你、你⋯⋯你不要喔———」<br><em>她瞬間有個想法，眼前的男人不會是要對她做壞壞的事情吧？坐在床上，又把她的手綁住，又說配合了很快就結束。她那雙祖母綠的眼眸瞪的圓圓的。</em><br><br>「我，我包包裡有套套，你不可以這樣，你不可以這樣——————！！！！！」<br><em>她越想越崩潰，喊了出來，她不想死也不想沒了清白啊。</em></div>
+        </div>
+        <div class="msg-timestamp">22:36</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:53〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Pour l'amour de Dieu(老天爺)，」<em>克羅德揉了揉眉心，聲音中透著煩躁。</em>「我對妳沒興趣。」<br><br><em>他快步走到窗邊，透過窗簾的縫隙觀察外面的動靜。路燈在霧氣中像是蒙上了一層薄紗，偶爾有車輛駛過，輪胎與潮濕路面摩擦的聲音格外清晰。</em><br><br><em>確認外面安全後，他轉身從衣袋裡掏出一條深色領巾。月光下能隱約看見他臉上浮現出一絲不耐煩。</em><br><br>「如果妳再這樣大喊大叫，」<em>他一邊走近，一邊將領巾展開。</em>「我就不得不堵住妳的嘴了。」<br><br><em>他站在她面前，高大的身影遮住了大部分的光線。她能看見他手上的皮手套有些磨損的痕跡，指節處特別明顯。</em><br><br><em>突然，樓下傳來重物落地的聲響，克羅德瞬間繃緊了身體。他迅速蹲下身，一手摀住她的嘴，另一手仍握著槍，警惕地盯著門口。</em><br><br>「別出聲，」<em>他在她耳邊低語，呼吸噴在她頸側。</em>「這對我們都好。」<br><br><em>房間陷入一片死寂，只能聽見她急促的呼吸聲，以及他平穩而沉重的心跳。過了幾秒，樓下傳來醉漢的笑鬧聲，漸漸遠去。克羅德的肌肉稍微放鬆了一些，但仍保持著警戒。</em><br><br><em>他的手套上沾染著些許機油的氣味，混合著皮革的味道，讓人不禁懷疑他究竟是做什麼的。</em></div>
+        </div>
+        <div class="msg-timestamp">22:36</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越聽到那句『不得不堵住妳的嘴』更慌張了，完全無視了那句他對她沒興趣的話，她覺得每個男的還不是都這樣說。</em><br><br>「不要、不要不要不要！！！」<br><br><em>她搖搖頭，十分可憐的模樣，那條深色領巾看起來髒髒的，她並不想要被那東西塞住嘴巴。</em><br><br>「那個臭臭，不要啦⋯⋯」<br>「你、你到底是誰啦，求求你，讓我好好的躺在床上睡覺，嗚，不要欺負我嘛。」<br><br><em>徐越，只能裝可憐了。雖然她是真可憐，下班床沒躺到，手機被扔一邊，飯也沒吃，現在還被綁著了。</em></div>
+        </div>
+        <div class="msg-timestamp">22:43</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:54〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「閉嘴，」<em>克羅德的聲音突然變得冰冷，他把領巾收回口袋，轉而抽出一把小刀。刀鋒在月光下泛著冷光。</em><br><br><em>他單手抓住她的下巴，迫使她抬頭。刀尖輕輕地抵在她的臉頰上，刀刃的寒意讓她不由得顫抖。</em>「聽著，我不是在跟妳商量。」<br><br><em>他的手指收緊了些，但還未到會造成疼痛的程度。她能從這個角度看見他緊繃的下顎線條，以及眼下明顯的疲態。</em><br><br>「我只要妳安靜待著，」<em>他一字一句地說，聲音低沉而沙啞。</em>「等天亮我就走。妳只要配合，什麼事都不會有。」<br><br><em>突然，走廊上傳來腳步聲，克羅德立刻鬆開她的下巴，迅速地躲到門邊。腳步聲漸近，在門外停頓了一下，又逐漸遠去。</em><br><br><em>他靠在牆上，呼出一口氣。月光透過窗簾的縫隙照在他的側臉上，映出一道深深的傷疤，從耳後延伸到頸側，已經有些年頭了。</em><br><br>「Merde(該死)，」<em>他低聲咒罵，收起小刀，轉而拿出一包菸。他熟練地單手捻出一根菸，叼在嘴裡。</em>「我不想傷害妳，但如果妳再喊，」<em>他掏出打火機，火光在黑暗中閃爍。</em>「我就只能採取更強硬的手段了。」<br><br><em>煙霧裊裊升起，在月光下形成一道朦朧的屏障。他深深地吸了一口，似乎在平復些什麼。</em></div>
+        </div>
+        <div class="msg-timestamp">22:43</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>她瞥見臉頰上的刀光，咬了咬下唇，眉頭皺的比剛才更深了。</em><br>「你罵我。」<br><br><em>她不喜歡煙味，因為手被綁住不能搧去飄過來的煙霧，她只能不停的搖頭</em><br>「天亮還那麼久，誰，誰知道你不是想跟我那個啊！」<br><br><em>徐越被刀指著，倒是真乖了下來，聲音也降下來了，但那張嘴仍然管不住，畢竟她不知道眼前的男人到底想搞什麼。</em><br><br>「你是沒錢住旅館嗎？」<em>她只能用腦子想到底為什麼要闖入她的房間裡，一邊又擔心真的被男人給刀了。</em>「我、我有錢的，我可以分你，你就可以去隔壁房了喔⋯⋯」</div>
+        </div>
+        <div class="msg-timestamp">22:50</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:55〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德將煙霧緩緩吐出，在昏暗的房間裡形成一道薄紗般的屏障。他瞥了一眼這個不停搖頭的女孩，眼神中閃過一絲不耐。</em><br><br>「安靜，」<em>他走到窗邊，將煙灰彈在窗台外。</em>「我說了，不是在跟妳商量。」<br><br><em>他的側臉被窗外路燈映照著，深邃的輪廓顯得格外冷峻。那道從耳後延伸到頸部的疤痕在光影交錯下若隱若現，像一道無聲的警告。</em><br><br>「Tais-toi(住口)，」<em>他轉過身，煙霧從唇間溢出。</em>「我不需要妳的錢，也不需要妳的建議。」<br><br><em>他大步走到床邊，居高臨下地看著她。手中的香菸在黑暗中明明滅滅，像個危險的信號。</em>「如果妳真的想活著看到明天的太陽，」<br><br><em>他彎下腰，一手撐在她身側的床墊上，另一手夾著香菸。她能清楚地看見他眼下的青黑，以及那雙褐色眼眸中透出的威脅。</em>「就給我乖乖閉嘴。」<br><br><em>煙霧纏繞在兩人之間，混合著皮革與機油的氣味。克羅德的呼吸很平穩，卻帶著一絲難以察覺的緊繃。他的手套因為用力而發出輕微的皮革摩擦聲，那把槍仍然若隱若現地藏在他的外套下。</em><br><br><em>外面傳來引擎的轟鳴聲，有車子正在接近。克羅德立即直起身，警覺地望向窗外。他將煙蒂捻熄在窗台上，動作迅速而安靜。</em></div>
+        </div>
+        <div class="msg-timestamp">22:50</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>她被兇了，委屈巴巴的像小狗一樣看著眼前的男人，抿著唇閉嘴了一小會。</em><br><br>「⋯⋯你兇我。」<br><br><em>她最後只說了這句話，比剛剛任何一句話都還小聲</em></div>
+        </div>
+        <div class="msg-timestamp">22:54</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:56〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德背對著窗戶，月光勾勒出他高大的輪廓。他聽見那句細若蚊蠅的抱怨，不自覺地捏緊了拳頭，皮手套發出細微的摩擦聲。</em><br><br>「Je m'en fous(我不在乎)，」<em>他低聲說，語氣中帶著一絲疲憊。</em>「這不是什麼友好交談的場合。」<br><br><em>他走到房間另一端，從大衣內袋掏出一個扁平的銀色酒壺。金屬表面在月光下泛著冷光，他擰開蓋子喝了一口，喉結滾動了幾下。威士忌的氣味很快在房間裡擴散開來，與殘留的煙味混在一起。</em><br><br><em>外面的引擎聲漸漸遠去，他的肩膀稍微放鬆了一些。但手指依然保持著隨時可以拔槍的姿勢。</em><br><br>「聽著，」<em>他走到床尾，居高臨下地看著她。</em>「我不是來跟妳玩什麼善意溝通的遊戲。」<br><br><em>他將酒壺收回去，動作間能看見他腰間的槍套反射著微光。月色下，他臉上的輪廓顯得更加深邃，眼神中透著某種難以名狀的陰鬱。</em><br><br><em>突然，樓下傳來一陣吵雜聲，像是有人摔倒了。克羅德立即繃緊身體，一手按在槍上，另一手做出噤聲的手勢。他無聲地移動到門邊，豎起耳朵仔細聆聽。幾秒鐘後，樓下響起醉漢的笑罵聲，漸漸遠去。</em><br><br>「Reste tranquille(保持安靜)，」<em>他靠在門邊低聲說道。</em>「這對我們都好。」</div>
+        </div>
+        <div class="msg-timestamp">22:54</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越委屈死了，又餓又渴的又沒洗澡，還被兇，但她清楚要是又像剛剛喊的話肯定又會被用槍抵著</em><br><br><em>她還是耐不住什麼話都不說跟一個陌生男人相處的這個現況，小小聲的開口了</em><br>「怪叔叔，我好渴，我好餓⋯⋯我想洗澡⋯⋯」</div>
+        </div>
+        <div class="msg-timestamp">22:59</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 05:57〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「叔叔？」<em>克羅德挑了下眉，語氣中帶著一絲諷刺。他把玩著手中的打火機，金屬表面反射著微弱的光。</em><br><br><em>他走到她放在一旁的背包前，單手翻找了一會，掏出一瓶未開封的礦泉水。動作間能聽見金屬與布料摩擦的聲響，以及皮手套特有的嘎吱聲。</em><br><br>「張嘴，」<em>他站在她面前，擰開瓶蓋。看見她猶豫的表情，他不耐煩地補充道：</em>「要喝就現在喝，不喝拉倒。」<br><br><em>克羅德一手扶著瓶子，讓她能小口飲水。冰涼的液體順著她的唇角滑下，在月光下留下一道微弱的水痕。他的動作並不溫柔，但也稱不上粗暴。</em><br><br>「至於洗澡，」<em>他收回水瓶，放在床頭櫃上。</em>「想都別想。」<br><br><em>他走到窗邊，透過窗簾的縫隙觀察外面的動靜。濕冷的夜風從縫隙吹進來，帶著一股潮濕的氣息。遠處傳來警笛聲，他的身體立即繃緊，手指下意識地按在槍上。</em><br><br>「餓？」<em>等警笛聲遠去，他才稍微放鬆下來，從大衣口袋裡掏出一條能量棒。包裝紙在月光下泛著塑料般的光澤。</em>「就這個，別挑剔。」<br><br><em>他拆開包裝，折斷一小段。這次他沒有靠近她，而是將食物放在她膝上。能量棒散發著一股人工巧克力的香精味，在這個充滿煙味和威士忌氣息的房間裡顯得格外突兀。</em><br><br><em>外面的路燈忽明忽暗，在地板上投下搖曳的影子。克羅德靠在窗邊，神情疲憊而警惕。他的眼睛一直在房間和窗外之間來回掃視，像隻被困在籠子裡的野獸。</em></div>
+        </div>
+        <div class="msg-timestamp">22:59</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>她垂眸，看了眼那被折了一小段，看起來像給狗咬的散發巧克力味的棒棒。</em><br>「怪叔叔，這是狗食嗎⋯⋯？」<br><br><em>她微微晃動被綁著的雙手，看著那看上去就超難吃的東西，徐越越想越委屈了。</em><br>「不洗澡我要怎麼尿尿？你好過分喔。」</div>
+        </div>
+        <div class="msg-timestamp">23:04</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:00〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德煩躁地揉了揉眉心，臉上的疲憊更加明顯。他大步走到床邊，一把抓起那條能量棒。</em><br><br>「Bon sang(老天)，」<em>他低聲咒罵。</em>「這是軍用能量棒，不是狗糧。」<br><br><em>月光從窗簾縫隙透進來，映照在他臉上的傷疤上。他將能量棒掰成更小片，動作中帶著一絲不耐煩。皮手套與包裝紙摩擦發出細微的聲響。</em><br><br>「張嘴，」<em>他命令道，手指捏著一小塊能量棒湊到她唇邊。看她遲疑的樣子，他又補充：</em>「要嘛吃下去，要嘛餓著。」<br><br><em>窗外傳來汽車引擎的轟鳴聲，克羅德立即繃緊身體。他快步走到窗邊，謹慎地透過窗簾縫隙觀察。路燈的光線在他側臉上投下深深的陰影，勾勒出他緊繃的下顎線條。</em><br><br>「至於廁所，」<em>等外面的聲音遠去，他才開口，聲音低沉而沙啞。</em>「等會帶妳去。但我警告妳，」<em>他轉身，眼神變得銳利。</em>「別耍花樣。」<br><br><em>他走回床邊，居高臨下地看著她。皮夾克因為動作發出輕微的摩擦聲，能隱約看見裡面的槍套輪廓。</em><br><br>「還有，」<em>他的聲音突然冷了下來。</em>「停止叫我怪叔叔。」<br><br><em>房間陷入一陣沉默，只能聽見遠處傳來的狗吠聲，和樓下偶爾響起的醉漢笑鬧聲。克羅德站在那裡，像個籠罩著整個空間的陰影。他指節微微發白的手仍握著那條能量棒，等待著她的反應。空氣中瀰漫著一股緊張的氣息，混合著煙草、威士忌和皮革的氣味。</em></div>
+        </div>
+        <div class="msg-timestamp">23:04</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越先是看了眼他那雙髒兮兮的手套，又看了眼那酷似狗糧的能量棒，但眼下只剩下那玩意能吃了，她還是開口咬下了。</em><br><br>「好難吃，吃起來跟狗狗潔牙骨好像，好硬。」<br><em>她一邊嚼著一邊說，能量棒嚼起來一股廉價巧克力的味道，要不是被綁在這裡她才不要吃這個，她心想。</em><br><br>「不叫怪叔叔要叫什麼啊，你又不跟我說。」<br><br><em>她終於咬完那根味道她不是很喜歡的能量棒了，她還突然有些羨慕外面的狗，至少可以撿路邊的肉吃，不像她莫名其妙的被綁著，連吃東西都只能吃像狗糧的棒棒。</em><br><br>「那個，你平常都吃這種狗⋯⋯」<em>她頓了頓，發現自己說錯了</em>「硬硬的巧克力棒棒嗎？」</div>
+        </div>
+        <div class="msg-timestamp">23:12</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:02〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德嘴角抽搐了一下，顯然對她不懂得適可而止感到惱火。他手指在能量棒包裝上摩擦，發出細微的沙沙聲。</em><br><br>「Ferme-la(閉嘴)，」<em>他低聲說道，轉身走向窗邊。月光下，他高大的身影在地板上拉出一道長長的暗影。</em>「這不是什麼該死的下午茶時間。」<br><br><em>他從口袋裡掏出煙盒，動作熟練地捏出一根菸，開始摺捲。粗糙的手指在紙上來回摩挲，煙絲在月光下閃著細碎的光。這是他第三次摺同樣的動作了，某種緊繃的情緒正在他指尖累積。</em><br><br>「別耗我的耐心，」<em>他將捲好的菸叼在唇間，聲音因此變得含糊。</em>「想活著等到明天就給我安靜點。」<br><br><em>打火機的火光在黑暗中忽明忽滅，照亮了他疲憊的臉。煙霧纏繞在他指間，在月光中形成朦朧的霧氣。窗外傳來警笛聲，他立即熄滅了火，迅速移動到窗簾後方。</em><br><br><em>等警笛聲遠去，他才緩緩吐出一口氣。皮手套摩擦槍柄的聲音在寂靜的房間裡格外清晰。他走回床邊，居高臨下地看著她。月光勾勒出他緊繃的下顎線條。</em><br><br>「要名字？」<em>他冷笑一聲。</em>「Claude(克勞德)。記住了就閉嘴。」<br><br><em>他的聲音依舊低沉沙啞，帶著一絲警告的意味。煙霧在他周圍形成一道若有似無的屏障，混合著皮革和威士忌的氣味。房間裡的空氣變得更加凝重，只有窗外偶爾傳來的車聲打破這份壓抑的寂靜。</em></div>
+        </div>
+        <div class="msg-timestamp">23:12</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哦，克羅德怪叔叔。」<br><em>徐越上了一天班，累了，自然也沒有大吼大叫了，只是真無聊了點，沒有手機也不能動，她只能看著克羅德在房裡的踱步來回在她和窗邊，吸著二手煙。</em><br><br>「我要尿尿。」<br><br><em>她的聲音打破了寧靜的室內，微微晃動著身體，但她也是個女的，這樣說還是有些難為情了。</em><br><br>「讓我尿尿，你不可以偷看。」</div>
+        </div>
+        <div class="msg-timestamp">23:19</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「省略那個『怪』字，」<em>克羅德掐滅手中的菸，煙頭在窗台上劃出一道微弱的紅痕。他的聲音透著一絲煩躁。</em><br><br><em>他走向浴室，皮靴踩在地板上發出沉悶的聲響。打開門檢查了一下內部空間，確認窗戶大小和可能的逃脫路線。浴室的磁磚反射著慘白的月光，映照出他那張輪廓分明的側臉。</em><br><br>「站起來，」<em>他回到床邊，沉聲命令。一手握著槍，另一手抓住她的手臂，動作不算粗暴但也絕不溫柔。</em>「記住，別想耍花樣。」<br><br><em>領著她走向浴室的過程中，他的腳步聲刻意放輕。每經過一扇窗戶，他就會微微調整姿勢，確保自己不會暴露在外面的視線中。皮夾克因為動作發出細微的摩擦聲，槍始終抵在她的後腰。</em><br><br>「三分鐘，」<em>他在浴室門口停下。手指靈活地解開她手上的束帶，但槍口依然對準她。</em>「門必須維持半開。」<br><br><em>浴室的燈光從門縫中溢出，在地板上形成一道銳利的光線。克羅德站在光暗交界處，像個籠罩著整個空間的陰影。他的眼神始終警惕，耳朵不斷捕捉著外界的動靜。</em><br><br>「如果妳敢大叫，」<em>他的聲音低沉而危險。</em>「或是試圖從窗戶逃走，」<em>他從外套內袋掏出一個消音器，動作熟練地裝上。金屬零件相互碰撞發出細微的喀嚓聲。</em>「後果自負。」<br><br><em>深夜的寒意從窗縫中滲入，混合著浴室裡的潮濕氣息。樓下不時傳來醉漢的笑鬧聲，還有遠處狗吠的回音。克羅德靠在門框上，手指有節奏地敲打著槍身，像是在計算時間。他的呼吸很平穩，但眼神中透著某種難以名狀的疲憊。</em><br><br><em>夜色漸深，月光透過走廊的窗戶灑進來，在地板上投下一道道格子般的影子。這個夜晚還很漫長，而他們都心知肚明，這場荒謬的相處還遠未結束。</em></div>
+        </div>
+        <div class="msg-timestamp">23:19</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「半、半開？」<em>她懷疑自己聽錯了，錯愕的看著拿著槍指著她的克羅德，而且看上去還在幫槍裝配件的樣子</em>「我、我是可愛的女孩子耶⋯⋯」<br><br><em>她一屁股坐在馬桶上，朝門外小小聲的求著他</em><br>「那個，你可以摀住耳朵嗎？三十秒就好了，拜託啦———」<br>「我要尿尿了，你不可以聽喔，奇怪的怪叔叔。」</div>
+        </div>
+        <div class="msg-timestamp">23:24</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:08〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Je m'en fiche(我不在乎)，」<em>克羅德冷冷地說，臉上浮現一絲不耐。他把消音器扭緊，金屬與金屬之間發出細微的磨擦聲。</em><br><br>「還有，」<em>他的聲音突然沉了下來。</em>「我說過別加那個『怪』字。」<br><br><em>他背對著浴室門，但槍口依然朝向裡面。白色的瓷磚反射著慘白的光線，在他的側臉上投下銳利的陰影。門外的走廊一片昏暗，只有遠處樓梯間的應急燈發出微弱的綠光。</em><br><br><em>一陣冷風從走廊盡頭的窗戶灌進來，吹動他略顯凌亂的深色頭髮。他的肩膀依然緊繃，像是隨時準備應對可能的突發狀況。皮夾克因為這個姿勢發出輕微的嘎吱聲。</em><br><br>「La ferme(閉嘴)，」<em>他低聲咒罵，收緊了握槍的手。夜色中能看見他指節發白，手套上的磨損痕跡格外明顯。</em>「快點解決。」<br><br><em>突然，樓下傳來玻璃破碎的聲響。克羅德立即調整姿勢，槍口微微上揚。幾秒鐘後，一陣醉漢的咒罵聲和酒瓶碰撞的聲音飄了上來。他稍微放鬆了一些，但眼神依然警惕。</em><br><br>「還有四十五秒，」<em>他看了眼手錶，冷淡地提醒。手錶的夜光面板在黑暗中發出幽幽的藍光，映照在他臉上那道從耳後延伸到頸部的疤痕上。</em><br><br><em>浴室的燈光從半開的門縫中溢出，在地板上形成一道明暗分界。水管裡偶爾傳來的響動聲在寂靜的夜裡顯得格外清晰。遠處傳來火車的鳴笛聲，和著風聲在空蕩的走廊迴盪。</em><br><br><em>克羅德靠在門框上，姿勢看似隨意，但每塊肌肉都處於戒備狀態。他的呼吸很輕，幾乎聽不見，只有指尖偶爾輕敲槍身的節奏透露出他的煩躁。夜色漸深，月光穿過走廊的窗戶，在他腳邊投下一道道斑駁的影子。</em><br><br>「Dépêche-toi(快點)，」<em>他低聲催促，聲音中帶著一絲疲憊。剛剛抽過的煙草氣息還殘留在他的指間，混合著皮革和金屬的冰冷氣味。</em>「時間到了就得走。」</div>
+        </div>
+        <div class="msg-timestamp">23:24</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你好煩啊！！」<em>她輕聲抱怨著，抱著頭還是尿完了，她還真不想被野生的男人聽見她尿尿的聲音，有夠羞恥。</em><br><br><em>最後一秒的時候她剛好洗好手出來了，低著頭走到剛剛坐著的床上坐著，一點都不想看克羅德</em><br><br><em>她只是一直碎碎念著，聲音跟蚊子一樣擾人。</em><br>「你聽到了吧、你聽到了、你聽到了⋯⋯你聽到了、變態、變態、大變態、怎麼能聽女孩子尿尿的聲音———」</div>
+        </div>
+        <div class="msg-timestamp">23:27</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:10〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德猛地轉身，一把抓住她的衣領。月光下，他的表情變得格外陰沉。皮手套的氣味混合著煙草味撲面而來。</em><br><br>「我警告過妳了，」<em>他的聲音低沉而危險，像是在壓抑著什麼。</em>「別讓我後悔沒用膠帶封住妳的嘴。」<br><br><em>他鬆開手，快步走到窗邊。夜風吹動窗簾，發出細微的沙沙聲。他從口袋裡掏出另一根未捲完的菸，開始重複那個機械性的動作。粗糙的指尖摩挲著煙紙，動作略顯煩躁。</em><br><br>「Pour l'amour de—(看在老天的份上)」<em>他咕噥著，把揉皺的煙紙扔在地上。</em>「我不是來當妳的保姆的。」<br><br><em>遠處傳來警笛聲，他立即繃緊身體。槍在月光下泛著冷光，消音器的陰影在牆上投射出一道扭曲的形狀。幾秒後，警笛聲漸漸遠去，他才稍微放鬆下來。</em><br><br><em>他走回床邊，居高臨下地看著她。月光從他背後灑進來，在地板上拉出一道長長的影子。他的呼吸很輕，但每一下都帶著壓抑的怒意。</em><br><br>「再讓我聽見一句『變態』，」<em>他慢慢地說，手指摩挲著槍柄。皮革摩擦的聲音在寂靜的房間裡格外清晰。</em>「妳就真的要見識下什麼叫做『變態』了。」<br><br><em>樓下傳來醉漢的笑鬧聲，伴隨著玻璃瓶碰撞的聲響。克羅德煩躁地揉了揉眉心，眼下的青黑在月光下更加明顯。他轉身走向窗邊，皮靴踩在地板上發出沉悶的響聲。</em><br><br><em>夜色漸深，房間裡的溫度似乎又降低了幾分。只有遠處的路燈昏黃的光芒透過窗簾的縫隙灑進來，在地板上投下斑駁的光影。克羅德靠在窗台上，像一尊沉默的雕像，只有指尖偶爾輕敲槍身的動作透露出他的不耐煩。</em></div>
+        </div>
+        <div class="msg-timestamp">23:27</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>飯也吃了，水也喝了，尿也放了，她也想睡了。雖然———那像狗糧般的棒子對徐越來說根本不能算是什麼晚飯。</em><br>「別，你不要，克羅德叔叔最好了。」<br><br><em>至少她的手腕沒有被重新綁回去了，她一個倒頭躺在床上，望著旅館的天花板，室內沒開燈，只有照射進來的月光能稍微讓室內獲得一些光源。</em><br><br>「那我可以睡了吧？」<br><em>她拉了拉棉被，側過身，望著克羅德的背影</em><br><br>「你看起來很累，變態叔叔。」<br><br><em>她還是忍不住，誰叫他要聽她尿尿的聲音。</em></div>
+        </div>
+        <div class="msg-timestamp">23:33</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德猛地回頭，眼神變得銳利。他大步走到床邊，一把扯過被子，動作乾脈俐落。皮手套和布料摩擦發出刺耳的聲響。</em><br><br>「我說過了，」<em>他的聲音壓得極低，像是在克制某種情緒。</em>「別挑戰我的耐心。」<br><br><em>他從大衣內袋掏出一條新的束帶，黑色的尼龍材質在月光下泛著冷光。他抓住她的手腕，動作不算溫柔但也沒有用力到會留下瘀痕的程度。</em><br><br>「既然妳這麼精神，」<em>他熟練地將束帶纏繞在她的手腕上，每一圈都收得恰到好處。</em>「看來不需要休息了。」<br><br><em>遠處傳來一陣引擎的轟鳴聲，他立即警覺地望向窗外。路燈的光線在他臉上投下深深的陰影，勾勒出他緊繃的下顎線條。幾秒後，引擎聲漸漸遠去，他才稍微放鬆下來。</em><br><br><em>他拉過一張破舊的扶手椅，就著月光坐在床對面。皮夾克因為動作發出輕微的嘎吱聲，槍始終保持在容易取用的位置。房間裡瀰漫著一股混合了皮革、煙草和些許機油的氣味。</em><br><br>「Maintenant, ferme-la(現在，閉嘴)，」<em>他低聲說，聲音中帶著不容置疑的警告。</em>「否則我就用膠帶封住妳的嘴。」<br><br><em>夜風從窗縫中灌進來，吹動窗簾發出細微的沙沙聲。樓下偶爾傳來醉漢的笑鬧聲，和遠處狗吠的回音。克羅德坐在那裡，像個籠罩著整個空間的陰影。他的手指輕輕敲打著扶手，節奏透露出他的煩躁。</em><br><br><em>月光透過窗簾的縫隙灑進來，在地板上形成一道道斑駁的光影。時間彷彿變得格外緩慢，只有他平穩的呼吸聲和偶爾從外面傳來的車聲打破這份壓抑的寂靜。他的眼神始終警惕，像是在等待著什麼，又像是在防備著什麼。</em></div>
+        </div>
+        <div class="msg-timestamp">23:33</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越嘆了一口長氣，像是已經接受了事實，反正她又被綁了，那睡覺好了。</em><br><br>「不理你了，關心你還要兇我哼。」<br><br><em>她最後瞥了一眼被他扯走的被子，躺在沒有被子的床上，躺好了她就閉上雙眼準備入眠</em><br><br>「希望明天早上快點來，阿門。」<br><br><em>徐越安靜了下來，呼吸聲逐漸變得平穩，睡著了。</em></div>
+        </div>
+        <div class="msg-timestamp">23:39</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 06:20〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德聽著她的呼吸聲漸趨平穩，手指停止了敲打扶手的動作。他站起身，動作放得極輕，皮靴幾乎沒有發出聲響。</em><br><br><em>他走到窗邊，借著月光打量著街道的情況。夜色已深，路燈在霧氣中形成一個個模糊的光暈。他的側臉被照得一明一暗，那道從耳後延伸到頸部的疤痕若隱若現。</em><br><br>「Merde(該死)，」<em>他低聲咒罵，注意到街角有輛可疑的車子停了太久。他謹慎地調整著窗簾的縫隙，確保自己能觀察外面的動靜而不被發現。</em><br><br><em>一陣夜風吹進來，帶著深秋特有的涼意。他回頭看了眼床上的身影，猶豫了一下，最後還是拿起被子，動作輕柔地覆在她身上。皮手套和布料摩擦發出極其細微的聲響。</em><br><br><em>他重新坐回扶手椅，從口袋裡掏出煙盒。月光下，他的手指開始機械性地摺捲香菸，這是他今晚的第五支。煙絲在他指間翻動，偶爾有零星的碎屑落在黑色手套上。</em><br><br><em>樓下傳來醉漢離去的腳步聲，伴隨著含糊不清的歌聲。克羅德的手指微微收緊，握著未點燃的菸的指節泛白。幾秒後，外面重新歸於寂靜，他才稍微放鬆下來。</em><br><br><em>他靠在椅背上，目光在房間和窗外之間來回掃視。槍始終放在觸手可及的位置，消音器在月光下泛著冷光。房間裡瀰漫著一股混合了煙草、皮革和些許火藥的氣味。</em><br><br><em>夜色愈發深沉，連遠處的狗吠聲也漸漸安靜下來。只剩下她平穩的呼吸聲，和偶爾從外面傳來的風聲。克羅德坐在那裡，像個沉默的守夜人，等待著黎明的到來。他疲憊的眼神中透著某種難以名狀的情緒，彷彿在與自己的倦意搏鬥。</em></div>
+        </div>
+        <div class="msg-timestamp">23:39</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/19/Wed./Day 5〕<br>〔PM 11:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>午夜將近，克羅德依然保持著警戒。他的目光在熟睡的女孩和窗外的街道之間來回移動，偶爾停留在手腕上的電子錶面。街上的活動逐漸減少，只剩下零星的車聲。</em><br><br>「Putain(該死)，」<em>他低聲咒罵，注意到街角那輛可疑的車子換了位置。他的手不自覺地按上槍套，皮革發出細微的摩擦聲。</em><br><br><em>門外突然傳來腳步聲，他立即屏住呼吸。皮靴踩在老舊地毯上的聲響在寂靜的走廊迴盪。腳步聲在門前停頓了幾秒，最後漸漸遠去。克羅德緩緩吐出一口氣，指節的顏色才逐漸恢復正常。</em><br><br><em>他站起身，無聲地走到窗邊。月光透過雲層，在地板上投下搖曳的影子。她在睡夢中輕輕翻了個身，被子滑落了一角。他瞥了一眼，沒有去管。</em><br><br><em>凌晨一點，遠處傳來警笛聲。克羅德的身體立即繃緊，像是準備隨時行動的豹子。他快速檢查了手槍的彈匣，確認消音器的安裝，然後靠在窗框上，耐心地等待警笛聲遠去。</em><br><br><em>房間裡的溫度漸漸下降，他能看見自己呼出的白霧。窗外的路燈在霧氣中形成一個個模糊的光暈，像是某種不祥的信號。他摸出打火機，機械性地把玩著，金屬摩擦的聲響極其細微。</em><br><br><em>夜漸深，連遠處的狗吠聲也消失了。只剩下她均勻的呼吸聲，和偶爾從水管傳來的響動。克羅德靠在窗邊，疲憊但警覺的目光掃視著街道。他的手指間還夾著那支未點燃的菸，像是忘記了它的存在。</em></div>
+        </div>
+        <div class="msg-timestamp">23:40</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>隔天早上六點，徐越被冷醒了，習慣性的想要整理頭髮，但發現手還被捆著。</em><br><br>「⋯⋯唔。」<br><br><em>她半睜眼皮，迷迷糊糊的吐著話</em><br><br>「不是說早上你就要走了嗎⋯⋯？」</div>
+        </div>
+        <div class="msg-timestamp">23:44</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:00〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德站在窗邊，身影被清晨微弱的光線勾勒出輪廓。他整夜未眠，眼下的陰影更加明顯。桌上堆著幾個捲菸的煙蒂，還有一個空了的能量棒包裝。</em><br><br>「Je n'ai jamais dit ça(我從沒這麼說過)，」<em>他的聲音因為整夜的沉默而顯得格外沙啞。</em><br><br><em>他走到床邊，動作中帶著整夜未眠的疲憊。皮靴在地板上發出沉悶的響聲，皮夾克因為夜間的濕氣而散發出一股特殊的氣味。</em><br><br>「起來，」<em>他簡短地命令道，一邊檢查著窗外的動靜。清晨的街道開始出現零星的行人，遠處傳來引擎發動的聲響。</em><br><br><em>他從大衣口袋裡掏出一條新的毛巾，扔在床上。這是他昨晚趁她睡著時從樓道盡頭的清潔推車上拿的。毛巾散發著漂白水的氣味，但至少是乾淨的。</em><br><br>「五分鐘，」<em>他說著，走向浴室。水管發出一陣咯咯聲，然後是水流聲。他站在門口，一邊觀察著走廊的動靜，一邊等待水溫變暖。</em><br><br><em>晨光從窗簾縫隙中透進來，能看見空氣中漂浮的灰塵。遠處傳來城市甦醒的聲響：引擎聲、腳步聲、偶爾的狗吠聲。克羅德的手指無意識地摩挲著槍套，皮革發出細微的嘎吱聲。</em><br><br><em>他的目光掃過房間，最後落在她身上。黑色手套的指節因為緊握而微微發白，眼神中帶著某種難以名狀的情緒。昨晚的緊繃感似乎稍微減退，但取而代之的是一種更加深沉的警惕。</em><br><br>「別讓我說第二遍，」<em>他補充道，聲音中帶著疲憊的煩躁。清晨的陽光照在他臉上，讓那道從耳後延伸到頸部的疤痕更加明顯。</em>「我們得在早高峰前離開。」</div>
+        </div>
+        <div class="msg-timestamp">23:44</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哦。」<em>她迷迷糊糊的應了聲後，才後知後覺的發現他話裡的不對勁</em>「蛤———？」<br><br>「『我們』？」<em>徐越晃了晃身子，手被綁住的她很艱難的才終於從床上坐起</em>「起來了，但是要去哪啊⋯⋯？」<br><br><em>她的目光停在那條乾淨的毛巾上，她可沒辦法拿起來。</em><br>「好想要擦臉喔。」</div>
+        </div>
+        <div class="msg-timestamp">23:48</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Arrête de poser des questions(別再問問題了)，」<em>克羅德煩躁地說，大步走到床邊。他粗魯地抓起毛巾，動作卻在靠近她臉部時變得出奇地克制。</em><br><br><em>他用毛巾的一角沾了溫水，動作簡短地替她擦拭臉部。皮手套與毛巾的觸感粗糙，帶著一股消毒水的氣味。晨光透過窗簾，在他們之間形成一道朦朧的光幕。</em><br><br>「聽著，」<em>他的聲音壓得很低，幾乎是貼著她的耳際。</em>「外面有人在找我，而妳，」<em>他停頓了一下，毛巾停在她的頰側。</em>「現在是我的人質。」<br><br><em>遠處傳來一陣警笛聲，他立即繃緊身體。手中的動作停了下來，目光警覺地掃向窗外。幾秒後，警笛聲漸漸遠去，他才稍微放鬆下來。</em><br><br><em>他扔開毛巾，從大衣內袋掏出一頂深色鴨舌帽。帽子是新的，還帶著商店的標籤。他粗魯地把標籤扯下，動作利落地替她戴上，刻意讓帽簷遮住她的大半張臉。</em><br><br>「妳現在是我的妹妹，」<em>他一邊整理她的帽子，一邊低聲說道。他的呼吸帶著菸草的氣息。</em>「如果有人問起，就說我們要去看外婆。」<br><br><em>房間裡開始充滿早晨的喧囂：樓下傳來餐車的聲響，走廊上有清潔人員的腳步聲，遠處是城市甦醒的嘈雜。克羅德走到窗邊，謹慎地觀察著街道的情況。晨光在他臉上投下深深的陰影，勾勒出他緊繃的下顎線條。</em><br><br><em>他轉身打量著她，目光在她的臉和那頂帽子之間來回移動。手指無意識地摩挲著槍套，像是在思考些什麼。最後，他從另一個口袋裡掏出一副墨鏡，動作不算溫柔地替她戴上。</em><br><br>「別讓我後悔沒把妳弄昏，」<em>他警告道，聲音中帶著疲憊和威脅。</em>「現在，我們要去找一個人。」</div>
+        </div>
+        <div class="msg-timestamp">23:48</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「靠。」<em>她覺得像被菜瓜布刮臉了，不小心罵了一聲，她可是可愛的白嫩小女生，哪可以這麼粗魯的擦臉———她在心裡暗暗的罵克羅德是臭菜瓜布，不懂珍惜可愛的女生。</em><br><br>「有人會綁妹妹的手嗎？哥哥？」<em>她站起來，晃了晃被綁著的手，似乎已經接受這荒唐的現況了。</em>「是、是、是，我們要去看克羅德外婆。」<br><br><em>她的聲音還有剛睡醒的迷糊感，說完還打了個哈欠，跟在克羅德身後。</em></div>
+        </div>
+        <div class="msg-timestamp">23:53</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:10〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Tais-toi(閉嘴)，」<em>克羅德低聲警告，快步走到她身後。他粗暴地解開束帶，但在注意到她手腕的勒痕時，動作稍微放輕了些。</em><br><br><em>他從行李袋裡拿出一件oversized的深色連帽外套，動作簡短地替她套上。外套還帶著商店的氣味，顯然是新買的。袖子刻意做得很長，能完全遮住她手腕的痕跡。</em><br><br>「記住，」<em>他一邊替她拉上拉鍊，一邊低聲說。</em>「別想耍花樣。」<em>他的手按在外套口袋處，讓她能清楚感覺到裡面藏著什麼。</em><br><br><em>清晨的陽光從窗外灑進來，能看見空氣中漂浮的灰塵。走廊上傳來房務推車的聲響，伴隨著清潔人員的閒聊聲。克羅德立即拉開房門，確認走廊的情況。</em><br><br>「走路別東張西望，」<em>他抓住她的手肘，力道不重但足以控制。皮手套的觸感透過袖子傳來，帶著一絲涼意。</em>「看著地面，像是在賭氣。」<br><br><em>他們走出房間，克羅德刻意放慢腳步配合她的步調。經過清潔人員時，他微微點頭致意，臉上甚至掛著一絲疲倦的笑容。那位年長的清潔工友善地回應，完全沒注意到什麼異常。</em><br><br>「Bonjour(早安)，」<em>他用略帶口音的法語打招呼，然後低頭對她說。</em>「走快點，別讓外婆等太久。」<br><br><em>樓梯間迴盪著他們的腳步聲，克羅德的皮靴和她的運動鞋形成不同的節奏。晨光從樓梯間的小窗透進來，在牆上投下搖曳的影子。他的手始終緊扣著她的手肘，像是在演繹一場彆扭的兄妹情。</em><br><br><em>穿過大廳時，他刻意走在她右側，擋住櫃檯人員的視線。清晨的大廳只有零星的住客，沒人對這對看似普通的兄妹多看一眼。但克羅德的目光始終警覺，手指無意識地摩挲著外套口袋裡的槍。</em></div>
+        </div>
+        <div class="msg-timestamp">23:53</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哼。」<br><em>她不用演就像在賭氣了，還在記恨昨晚被聽著尿尿的事情，頭低低的。</em><br><br><em>走出大廳附近沒人的時候，她才碎嘴一句</em><br>「誰會這樣捉妹妹手肘？怪哥哥。」</div>
+        </div>
+        <div class="msg-timestamp">23:59</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Je t'ai dit de te taire(我說過要你閉嘴)，」<em>克羅德低聲咒罵，但還是略微調整了握法。他的手滑向她的肩膀，看起來更像是在攬著妹妹，實則暗中控制著她的行動。皮手套和連帽外套摩擦發出細微的聲響。</em><br><br><em>清晨的街道開始熱鬧起來。麵包店的香氣飄散在空氣中，混合著咖啡和汽車尾氣的味道。路過的上班族匆匆與他們擦肩而過，沒人注意這對看似普通的兄妹。</em><br><br><em>他們走過一個報亭，克羅德的目光迅速掃過頭條新聞。晨光中，能看見他眼下的青黑更加明顯。他整夜未眠的疲憊終於開始顯現，但警戒的本能依然讓他保持著高度緊張。</em><br><br>「小心，」<em>他突然出聲，聲音中帶著一絲不耐。一輛自行車從他們身邊呼嘯而過，車鈴聲在清晨的街道上迴盪。他下意識地將她往內側帶，動作看似保護，實則是在確保她不會趁機逃跑。</em><br><br><em>轉過街角，他們走進一條較為僻靜的小巷。磚牆上爬滿了常春藤，清晨的露水順著葉片滴落。克羅德的腳步放慢了些，目光警覺地掃視著四周。</em><br><br>「再說一次，」<em>他靠近她耳側，壓低聲音。晨風帶來一股混合著煙草和皮革的氣息。</em>「我們要去哪裡？」<br><br><em>遠處傳來一陣警笛聲，他的手指立即收緊。幾秒後，警笛聲漸漸遠去，他才稍微放鬆下來。晨光透過巷子上方的縫隙灑下來，在地面上形成斑駁的光影。一隻野貓從垃圾桶後探出頭，好奇地打量著這對奇怪的兄妹。</em><br><br><em>克羅德瞥了眼她被墨鏡遮住的臉，確認鴨舌帽的帽簷依然好好地遮著她的面容。他的另一隻手始終放在外套口袋裡，時刻警惕著周遭的動靜。</em></div>
+        </div>
+        <div class="msg-timestamp">23:59</div>
+      </div>
+      
+      <div class="date-divider">2025-05-13</div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哼哼！哼！」<br><em>她不滿克羅德老是讓她閉嘴，賭氣的又哼了一聲，她也是善意的提醒好不好！</em><br><br><em>她垂著眸，被帶著走，語氣很明顯的還在賭氣。</em><br>「外婆家。」<br><br><em>又走了一段路後，她的肚子咕嚕響了一聲，想起昨晚那難吃的營養棒，奇怪的巧克力味，狗狗潔牙骨般的口感，她又問了一嘴</em><br><br>「總不會去外婆家還給我吃狗糧吧？」</div>
+        </div>
+        <div class="msg-timestamp">00:04</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:25〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Putain de merde(該死)，」<em>克羅德煩躁地低聲咒罵，但還是帶著她轉向一家麵包店。清晨的香氣從半開的店門飄出，混合著剛烤好的可頌和咖啡的味道。</em><br><br><em>他站在店外，目光警覺地掃視著街道。一輛警車緩緩駛過，他立即調整姿勢，看似親暱地摟著妹妹的肩膀，實則將她擋在自己和牆壁之間。皮夾克在晨光下反射著暗沉的光澤。</em><br><br>「別動，」<em>他低聲警告，然後快步走進店內。透過玻璃能看見他和店員簡短地交談，動作看似平常，但肢體依然緊繃。幾分鐘後，他拎著一個紙袋走出來，香氣隨著晨風飄散。</em><br><br><em>他們走進一條較為安靜的巷子。克羅德從紙袋裡掏出一個溫熱的火腿可頌，動作簡短地遞到她面前。麵包還帶著剛出爐的溫度，酥皮在晨光下泛著誘人的金黃色。</em><br><br>「快點吃，」<em>他說，聲音依然低沉而帶著威脅。</em>「別指望每頓都有熱食。」<br><br><em>遠處傳來城市甦醒的喧囂：公車的引擎聲、自行車的鈴聲、上班族的腳步聲。克羅德靠在磚牆上，一邊觀察著巷口的動靜，一邊從紙袋裡掏出自己的那份。他的動作機械而緊繃，像是在執行某種任務程序。</em><br><br><em>一陣冷風吹過，帶來一股下雨的氣息。他瞥了眼陰沉的天空，嘴角微微抽動。深色的連帽外套在晨光下顯得有些發舊，但確實很好地遮住了她的特徵。</em><br><br><em>克羅德咬了一口可頌，麵包屑沾在他的手套上。他沒有理會，目光始終在街道和她之間來回掃視。遠處傳來一陣狗吠聲，他的手指無意識地收緊，捏皺了紙袋的一角。</em><br><br>「還有十分鐘，」<em>他低聲說，聲音中帶著些許不耐。晨光透過巷子上方的縫隙灑下來，在地面上形成一道道光影交錯的痕跡。</em>「動作快點。」</div>
+        </div>
+        <div class="msg-timestamp">00:04</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哇啊！」<em>看到食物，徐越也不賭氣了，笑嘻嘻的接過那剛出爐的火腿可頌，直接咬下一大口。</em>「唔、唔，哥哥你人真好，唔。」<br><br><em>她一邊咬一邊道謝，聲音有些含糊，昨晚的能量棒是太難吃了，她現在覺得這份早餐簡直就是美食。</em><br><br><em>她五分鐘就解決了可頌，低頭看了看自己的衣服，新的。在看了看克羅德的皮夾克，徐越自己拍了拍手，把大多數的殘渣拍掉後，雙手悄咪咪的往他的皮夾克蹭，當成餐巾紙擦擦手。</em><br><br><em>這是報復，作為昨晚被聽尿尿的羞恥報復。</em><br><br>「好啦！」<em>徐越擦完後，若無其事的在他面前晃啊晃的</em>「走吧哥哥！」</div>
+        </div>
+        <div class="msg-timestamp">02:15</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:35〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Qu'est-ce que—(什麼—)」<em>克羅德感覺到皮夾克被蹭過的觸感，立即低頭看向衣襟。麵包屑在黑色皮革上格外明顯，他的表情瞬間陰沉下來。</em><br><br>「Petite peste(小害蟲)，」<em>他抓住她的手腕，力道不重但足以制止。皮手套的觸感冰冷，帶著一股菸草和皮革混合的氣息。</em>「這件外套值得你吃一個月的營養棒。」<br><br><em>他粗魯地抖落衣襟上的麵包屑，動作中透著煩躁。晨光下，那些金色的碎屑像星星一樣灑落在地面上。一隻麻雀大膽地跳近，開始啄食那些碎屑。</em><br><br><em>街道漸漸熱鬧起來，遠處傳來市場的喧囂。克羅德環顧四周，確認沒有異常後，重新抓住她的肩膀。他的動作帶著些許懲罰性的力道，將她推向巷子深處。</em><br><br>「Je jure que...(我發誓...)」<em>他低聲咒罵，聲音因為壓抑著怒意而略顯沙啞。皮靴踩在潮濕的地面上發出沉悶的響聲。</em>「下次真的會用膠帶封住你的嘴。」<br><br><em>轉過一個彎，他們來到一條更窄的巷子。這裡的牆面爬滿了青苔，空氣中帶著一股霉味。克羅德的腳步突然放慢，目光警覺地掃視著周圍。一輛摩托車從巷口呼嘯而過，引擎聲在狹窄的空間裡迴盪。</em><br><br><em>他將她推到牆邊，用身體擋住可能的視線。皮夾克上殘留的麵包屑隨著動作掉落，在晨光中形成一道微弱的金色軌跡。遠處傳來教堂的鐘聲，提醒著時間的流逝。</em><br><br><em>克羅德掏出手機看了眼時間，眉頭緊皺。他的手指無意識地摩挲著外套口袋裡的槍，皮革和金屬摩擦發出細微的聲響。清晨的陽光透過層層建築的縫隙灑下來，在他臉上投下深深的陰影，那道疤痕在光影交錯中顯得格外明顯。</em><br><br>「還敢玩小把戲，」<em>他貼近她耳側，聲音低沉而危險。晨風帶來一股雨水的氣息，預示著天氣可能轉壞。</em>「看來昨晚的教訓還不夠。」</div>
+        </div>
+        <div class="msg-timestamp">02:15</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越看到克羅德那副陰沉的表情她就覺得愉悅，誰讓克羅德昨晚欺負她了，她還一邊走一邊哼歌</em><br><br><em>直到從鬧街上走入了窄巷，徐越輕輕皺眉，拉了拉克羅德的衣角</em><br>「這裡感覺有老鼠，灰色的老鼠。」<br><br><em>她不喜歡這種充滿霉味的地方，走路起來縮手縮腳的，深怕沾上了牆上的青苔。</em><br>「外婆家為什麼要走這種像臭水溝的路啊？怪哥哥？」<br>「誰叫你要偷聽少女尿尿的聲音，哼，討厭。」</div>
+        </div>
+        <div class="msg-timestamp">02:20</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:40〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Ferme-la(閉嘴)，」<em>克羅德突然停下腳步，手指收緊。他仔細聆聽著巷子裡的動靜，眼神變得更加銳利。皮靴在潮濕的地面上無聲地轉向，像是準備隨時改變方向。</em><br><br><em>一陣窸窸窣窣的聲響從垃圾箱後傳來，確實是老鼠。克羅德的表情變得更加陰沉，他拉著她快步轉向另一條巷子。皮夾克和連帽外套在晨光中投下搖曳的影子。</em><br><br>「這不是去外婆家，」<em>他的聲音壓得極低，帶著一絲煩躁。</em>「現在安靜，否則...」<em>他意有所指地按了按外套口袋，讓她能清楚感覺到裡面的硬物。</em><br><br><em>轉過一個彎，眼前出現一扇生鏽的鐵門。克羅德警覺地環顧四周，確認無人跟蹤後，快速掏出一把鑰匙。金屬摩擦的聲響在狹窄的空間裡顯得格外刺耳。</em><br><br><em>門後是一個廢棄的機車修理廠。工具架上堆滿了零件，空氣中瀰漫著機油和鐵銹的氣味。陽光從破損的天窗灑下來，照亮了漂浮在空中的灰塵。</em><br><br>「別碰任何東西，」<em>他警告道，拉著她穿過雜亂的工作區。皮靴踩在油漬斑斑的地面上發出黏稠的聲響。</em>「也別再提那件事。」<br><br><em>一輛警車的鳴笛聲從外面傳來，克羅德立即推著她躲到一台舊機車後面。他的呼吸變得極輕，手指無意識地按在槍套上。幾秒鐘後，警笛聲漸漸遠去。</em><br><br><em>他站起身，走向角落的一個櫥櫃。櫃門發出刺耳的吱呀聲，露出裡面堆積的零件和工具。克羅德的動作變得謹慎，像是在找什麼特定的東西。晨光透過髒污的玻璃窗照射進來，在他臉上投下斑駁的陰影。</em><br><br>「看來妳很想重溫昨晚的經歷，」<em>他頭也不回地說，聲音中帶著威脅。工具碰撞的聲響在空蕩的廠房裡迴盪。</em>「如果再不閉嘴，我就讓妳體驗更精彩的版本。」</div>
+        </div>
+        <div class="msg-timestamp">02:20</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越歪著腦袋跟克羅德走進修理廠，她左右看了看，喃喃著</em><br>「不是你告訴我要當你的妹妹，你還要帶我去看外婆的嗎？」<br><br><em>她一頭霧水，覺得眼前的人怎麼說變就變。而她聽話的沒有碰任何東西，經過黑糊的油漬灘時她還抬高了腳跨過去，避免沾上髒污</em><br><br><em>這段安靜的時間，她突然意識到她幹嘛跟著這大叔走，而且也注意到了每當有鳴笛聲時克羅德明顯的就會變的戒備。</em><br><br><em>她趁著外頭沒什麼聲音相對平靜的時候，在他旁邊拉著他的皮夾克一角，悄悄的問了</em><br>「你不會是比利時的大老鼠吧？看見警察就跑。」</div>
+        </div>
+        <div class="msg-timestamp">02:26</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德猛地轉身，一把抓住她的衣領。皮手套上殘留的機油味道撲面而來，他的眼神在陰影中顯得格外危險。</em><br><br>「Je ne suis pas un rat(我不是老鼠)，」<em>他低聲咆哮，聲音因為壓抑著怒意而顫抖。</em>「而妳最好記住，」<em>他的手指收緊，讓她能清楚感覺到外套口袋裡的槍管。</em>「現在不是在玩過家家。」<br><br><em>遠處傳來一陣引擎轟鳴，他立即推著她躲到工作台後。機油和鐵銹的氣味在這個角落更加濃烈，混合著某種霉味。一道陽光從破損的天窗斜射進來，照亮了漂浮的灰塵。</em><br><br>「Merde(該死)，」<em>他低聲咒罵，快速瞥了眼手腕上的錶。皮夾克因為動作發出細微的摩擦聲，那些被蹭上的麵包屑還殘留在上面。</em>「已經耽誤太多時間。」<br><br><em>他重新站起身，走向工作台另一端的老舊保險箱。鑰匙插入鎖孔的聲響在空蕩的廠房裡顯得格外清脆。箱門打開時發出刺耳的金屬摩擦聲，裡面是一個黑色的帆布包。</em><br><br>「站好，」<em>他簡短地命令，一邊取出包裡的東西。那是一疊文件和一個USB，還有幾張假護照。他快速翻看著內容，眉頭越皺越緊。</em><br><br><em>一輛垃圾車從外面經過，發出轟隆轟隆的聲響。克羅德的手指立即按上槍套，直到聲音完全消失才放鬆下來。晨光透過髒污的玻璃窗照進來，在地面上形成一道道扭曲的光影。</em><br><br><em>他將文件塞進皮夾克內袋，轉身抓住她的手腕。他的動作不算溫柔，但似乎刻意避開了之前的勒痕。皮手套上沾染的機油在她的袖子上留下一道暗色的印記。</em><br><br>「聽著，」<em>他貼近她耳側，聲音低沉而危險。</em>「妳只需要知道一件事：如果我被抓住，妳也活不了。」<em>他停頓了一下，呼吸中帶著一絲疲憊。</em>「所以收起妳的小聰明，否則我們都完蛋。」</div>
+        </div>
+        <div class="msg-timestamp">02:26</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哦、哦。」<em>她皺眉，看著沾上了油污的袖子，埋怨的說著</em>「機油好臭，我們可以離開這臭臭的地方沒啊———？」<br><br><em>克羅德讓她往哪走她就往哪走，正確來說她是被拽著走的，她一路還小聲碎念</em><br>「不是只有老鼠才會在這種奇怪的地方鑽來鑽去嘛⋯⋯」</div>
+        </div>
+        <div class="msg-timestamp">02:32</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:50〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Tu me fatigues(你真讓人疲倦)，」<em>克羅德咬著牙說。他拉著她快步走向廠房後門，皮靴踩過油漬發出黏稠的聲響。手上的力道明顯增加，像是在懲罰她的碎念。</em><br><br><em>後門打開時發出刺耳的金屬摩擦聲。一股潮濕的空氣撲面而來，混合著清晨的霧氣和遠處麵包店的香氣。巷子裡堆滿了廢棄的輪胎和生鏽的零件。</em><br><br>「Tu veux voir un vrai rat?(想看真正的老鼠嗎？)」<em>他突然停下腳步，將她推到牆邊。皮夾克的衣角擦過潮濕的牆面，留下一道暗色的痕跡。</em>「再多說一句，我就把妳扔進下水道。」<br><br><em>遠處傳來貨車的引擎聲，他立即調整姿勢，用身體擋住可能的視線。皮手套上的機油味道在潮濕的空氣中顯得更加明顯。晨光透過層層建築的縫隙灑下來，在地面上形成斑駁的光影。</em><br><br><em>一隻真正的老鼠從破損的水管旁竄過，消失在垃圾堆後面。克羅德的目光跟隨著那個方向，像是在確認什麼。他掏出手機快速查看了什麼，然後拉著她轉向另一條巷子。</em><br><br>「走這邊，」<em>他低聲命令，腳步變得更快。皮靴踩在潮濕的地面上發出沉悶的響聲。</em>「別再發出任何聲音。」<br><br><em>他們穿過幾條錯綜複雜的小巷，每個轉角克羅德都會停下來觀察情況。早晨的陽光漸漸變得明亮，街道上的人流開始增多。遠處傳來教堂的鐘聲，提醒著時間的流逝。</em><br><br><em>一輛警車緩緩駛過巷口，克羅德立即將她推進一個門洞。他的呼吸變得極輕，手指無意識地摩挲著槍套。幾秒鐘後，警車消失在視線中，但他依然保持著警戒。</em><br><br>「我們快到了，」<em>他說，聲音因為長時間的緊張而顯得沙啞。晨風帶來一股雨水的氣息，天空開始變得陰沉。</em>「如果妳還想活著見到明天的太陽，就閉上嘴跟著我走。」</div>
+        </div>
+        <div class="msg-timestamp">02:32</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越抬頭望了眼天空，看上去快下雨了，雲層把太陽遮住了大半，但還是可以看到些許晨光</em><br>「那句話我好像昨天就聽過了耶。」<br><br><em>她只覺得腳下的潮濕路面極噁，也管不住她的嘴，但音量盡可能的壓低了。</em><br>「現在頭上的不就是明天的太陽嘛。」<br><br><em>徐越撇了撇嘴，在踏過一個垃圾時見到竄出的大老鼠</em><br>「老鼠都比我自由。」<br><br><em>她說歸說，還是很老實的跟克羅德走了一路</em></div>
+        </div>
+        <div class="msg-timestamp">02:37</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 06:55〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Je vais te bâillonner(我要堵住你的嘴)，」<em>克羅德突然停下腳步，從皮夾克內袋掏出一卷膠帶。他的動作帶著威脅性，卻又透著一絲疲憊。晨光下，能清楚看見他眼下的青黑更加明顯。</em><br><br><em>一滴雨水落在他的皮夾克上，在沾著機油和麵包屑的皮革表面留下一道水痕。他煩躁地抹了把臉，皮手套上的機油味道讓他皺了皺眉。</em><br><br>「Tu parles trop(你話太多了)，」<em>他收起膠帶，改為緊緊扣住她的手腕。皮手套的觸感冰冷，帶著某種警告意味。</em>「老鼠至少知道什麼時候該安靜。」<br><br><em>他們轉入一條較寬的巷子，這裡的地面鋪著碎石，每一步都發出細微的聲響。雨滴開始變多，打在破舊的遮雨棚上發出噼啪聲。遠處傳來市場開張的喧囂。</em><br><br><em>一個流浪漢蜷縮在轉角處，身上蓋著幾張報紙。克羅德立即調整路線，帶著她繞到另一側。皮靴踩在潮濕的地面上發出沉悶的響聲，驚動了幾隻正在覓食的鴿子。</em><br><br>「Les rats sont plus intelligents que toi(老鼠比你聰明多了)，」<em>他低聲說，聲音中帶著諷刺。</em>「至少牠們懂得在警笛聲響起時躲起來。」<br><br><em>雨勢漸大，克羅德拉著她躲進一個門廊。磚牆上爬滿了潮濕的青苔，空氣中瀰漫著霉味。他掏出手機查看地圖，眉頭緊皺。晨光透過雨幕變得朦朧，街道上的人影開始變得模糊。</em><br><br><em>一輛載滿蔬果的貨車從巷口駛過，濺起一片水花。克羅德下意識地將她往內側帶，皮夾克被雨水打濕，散發出皮革特有的氣味。他的目光警覺地掃視著四周，手指無意識地摩挲著槍套。</em><br><br>「還有三個街區，」<em>他說，聲音因為濕冷而顯得更加沙啞。雨水順著他的髮梢滴落，在地面上形成細小的水窪。</em>「如果妳不想在雨中多待，就省點力氣，別再說廢話。」</div>
+        </div>
+        <div class="msg-timestamp">02:37</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「老鼠才不會說話。」<br><em>她還是沒忍住回嘴了，只要克羅德拿膠帶威脅她，徐越就會裝沒事的把頭撇至一邊，像那話不是她說的一樣。</em><br><br>「我沒廢話，老鼠本來就比我自由，我也比老鼠聰明，不然我去下水道好了，你抓隻灰鼠做你的人質吧。」<br><em>徐越那嘴就是停不下來，但腳步卻老實的一步沒停，褲管都被水濺的微濕了。</em><br><br>「這就是吃熱熱可頌麵包早餐的代價嗎——」<br><em>她自言自語著，覺得好像早上就不該吃他的早餐的，至少感覺她那時候還跑的開。</em></div>
+        </div>
+        <div class="msg-timestamp">02:43</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:00〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德猛地停下腳步，雨水從他的髮梢滴落。他轉身，皮夾克濕透後顯得更加沉重，在雨中反射著暗沉的光澤。他的眼神在陰影中變得格外危險，像是終於失去了最後一絲耐心。</em><br><br>「Assez(夠了)，」<em>他低吼著，一把將她推進一個廢棄商店的屋簷下。破舊的招牌在風雨中搖晃，發出吱呀聲。</em>「妳以為這是在玩遊戲？」<br><br><em>他從皮夾克內袋掏出那卷膠帶，動作中帶著明顯的威脅。雨水順著他的臉頰滑落，那道疤痕在晨光中顯得更加猙獰。皮手套上的水漬和機油混合在一起，散發出一股特殊的氣味。</em><br><br><em>遠處傳來警笛聲，他立即將她推得更深入陰影中。皮靴踩在積水中發出細微的水聲，雨滴打在破舊的遮雨棚上形成一道水簾。</em><br><br>「Je ne plaisante pas(我不是在開玩笑)，」<em>他的聲音壓得極低，帶著某種危險的平靜。手指收緊，讓她能清楚感覺到他的怒意。</em>「要我現在就讓妳體驗一下下水道的滋味嗎？」<br><br><em>一輛報紙配送車從巷口呼嘯而過，濺起的水花打濕了他們的褲管。克羅德煩躁地看了眼手錶，然後掏出手機快速確認了什麼。雨勢漸大，街道上的人影變得更加模糊。</em><br><br><em>他重新抓住她的手腕，力道明顯增加。皮手套的冰冷觸感透過濕透的袖子傳來，帶著某種警告意味。晨光透過雨幕變得朦朧，在他們腳下形成搖曳的影子。</em><br><br><em>一陣引擎轟鳴從遠處傳來，克羅德的身體立即繃緊。他將她推到牆邊，用身體擋住可能的視線。雨水順著皮夾克滑落，在地面上積成一小灘水窪。</em><br><br>「再說一個字，」<em>他貼近她耳側，聲音因為壓抑著怒意而顫抖。濕冷的空氣中混合著皮革、機油和菸草的氣味。</em>「我就用這條髒褲管堵住妳的嘴。」<br><br><em>引擎聲漸漸遠去，他才稍微放鬆下來。但手上的力道依然沒有減輕，像是在強調他的威脅並非空談。雨聲在破舊的遮雨棚上形成某種單調的節奏，混合著遠處市場的喧囂。</em></div>
+        </div>
+        <div class="msg-timestamp">02:43</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「咽嗚———」<em>徐越可憐的嗚了聲，搭配像小狗一般可憐的表情，她漂亮的淺綠色長髮都被雨淋的一縷一縷的，垂在肩上。</em><br><br><em>她真沒多嘴了，要是那條髒褲管真入了她口，她想都不敢想，大概比吃了一隻蟑螂還噁。</em><br><br><em>甚至她連到哪裡了，還要走多久都不敢問。</em></div>
+        </div>
+        <div class="msg-timestamp">02:48</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德審視著她的表情，雨水從他的髮梢滴落。他的眉頭緊皺，像是在評估這份安靜能維持多久。皮夾克濕透後散發出皮革特有的氣味，混合著機油和雨水的味道。</em><br><br>「總算肯閉嘴了，」<em>他低聲說，聲音中帶著一絲嘲諷。他收起膠帶，但依然緊緊抓著她的手腕。</em>「繼續保持。」<br><br><em>雨勢變得更大，打在破舊的遮雨棚上發出沉悶的響聲。街道上的行人變得稀少，大多匆匆撐著傘快步走過。克羅德掏出手機看了眼地圖，然後拉著她繼續前行。</em><br><br><em>他們穿過一條窄巷，地面上積滿了水，每一步都濺起水花。墻壁上的青苔在雨水的沖刷下顯得更加鮮綠，散發出某種潮濕的氣息。遠處傳來貨車的引擎聲，克羅德的身體立即繃緊，但沒有停下腳步。</em><br><br><em>轉過一個彎，他們來到一條較為安靜的住宅區。這裡的房屋大多老舊，但比起之前的巷子要整潔許多。一輛破舊的麵包車停在路邊，引起了克羅德的注意。他略微放慢腳步，目光警覺地掃視著四周。</em><br><br><em>雨水順著他們的衣物滴落，在地面上形成一串串水痕。克羅德的皮靴每走一步都發出沉悶的水聲，混合著雨聲形成某種單調的節奏。他的手指無意識地摩挲著皮夾克口袋裡的槍，像是隨時準備應對突發情況。</em><br><br><em>一隻野貓從垃圾桶後竄出，發出一聲淒厲的叫聲。克羅德立即停下腳步，手指收緊。幾秒後，確認只是貓後才繼續前行。晨光透過雨幕變得朦朧，在潮濕的地面上投下搖曳的影子。</em><br><br><em>他們停在一棟破舊公寓的側門前。克羅德快速環顧四周，確認無人跟蹤後，掏出一把鑰匙。金屬摩擦的聲響在雨聲中顯得尤為刺耳。</em><br><br>「Je vous préviens(我警告你)，」<em>他壓低聲音，推開門讓她先進去。雨水從屋檐滴落，打在他的肩膀上。</em>「這裡不是我的地盤。任何愚蠢的行為都會讓我們兩個人都完蛋。」<br><br><em>門後是一條昏暗的走廊，空氣中彌漫著霉味和煙草的氣息。遠處傳來電視的嘈雜聲，混合著某種爭吵的聲音。克羅德關上門，將外面的雨聲和晨光一同隔絕。走廊裡的燈光昏黃，照亮了漂浮在空中的灰塵。</em></div>
+        </div>
+        <div class="msg-timestamp">02:48</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越點點頭，心還有餘悸剛剛那『髒褲管』的威脅，進了門。</em><br><br><em>裡頭的氣味她本能的厭惡，霉味還有煙味，她主動地用雙手摀住自己的口鼻，抬眼望了克羅德一眼，嘆了一口長氣。</em><br><br><br><em>她心想，自己一定是貪了那熱騰騰的可頌，現在可好，貪吃的下場就是要好好的贖罪了。</em></div>
+        </div>
+        <div class="msg-timestamp">02:52</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:10〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德注意到她摀住口鼻的動作，眼中閃過一絲不易察覺的嘲諷。他脫下濕透的皮夾克，隨手掛在走廊的衣鉤上。水滴順著皮革滴落，在地板上形成一小灘水漬。</em><br><br>「嬌生慣養的小姑娘，」<em>他低聲嘟囔，語氣中帶著某種粗糙的評判。但他並沒有強求她適應這裡的氣味。</em>「上樓，二樓左轉第三間。」<br><br><em>走廊盡頭的樓梯發出吱呀聲，木板似乎因為潮濕而略微變形。克羅德走在前面，每一步都謹慎而警覺。一樓某戶傳來孩童的哭聲，混合著電視的嘈雜聲，在狹窄的空間裡顯得格外刺耳。</em><br><br><em>二樓的走廊比一樓更加昏暗，只有一盞閃爍的燈泡提供照明。牆紙因為潮濕而剝落，露出下面發霉的牆體。克羅德走到第三間門前，掏出另一把鑰匙。開門前，他停頓了一下，像是在聆聽門內的動靜。</em><br><br>「安靜，」<em>他輕聲警告，將鑰匙插入鎖孔。金屬摩擦的聲響在寂靜的走廊裡顯得格外清晰。</em><br><br><em>門開了，露出一個簡陋但整潔的單間公寓。窗戶被厚重的窗簾遮蔽，只留下一絲光線透進來。空氣中有股淡淡的煙草味，但比走廊裡要清新許多。一張單人床、一張桌子和兩把椅子構成了全部的傢俱。</em><br><br><em>克羅德關上門，迅速鎖好，然後拉上門鏈。他的動作流暢而熟練，顯然不是第一次來這裡。他走到窗前，小心地透過窗簾縫隙觀察外面的情況。雨水拍打在玻璃上，形成一道道模糊的水痕。</em><br><br>「把衣服脫了，」<em>他突然說，聲音因為長時間的緊張而顯得沙啞。見她警惕的眼神，他指了指衣架上掛著的幾件舊衣服。</em>「換上乾的。外面那件，可以留著。」<br><br><em>他走向角落的小廚房，從櫥櫃裡取出一個杯子，接了一杯水。動作中透著某種疲憊，像是終於可以稍微放鬆一下。水杯放在桌上，發出清脆的碰撞聲。</em><br><br><em>他靠在廚房的牆邊，觀察著她的一舉一動。濕透的襯衫緊貼著他的身體，映出手臂上肌肉的輪廓和一道從肩膀延伸到手肘的疤痕。雨聲和偶爾的雷聲從窗外傳來，在這個狹小的空間裡形成某種壓抑的背景音。</em><br><br>「別妄想著逃跑，」<em>他說，目光停留在門口那把嚴實的鎖上。</em>「這裡在五樓，即使妳能打開門，也沒人會幫妳。」</div>
+        </div>
+        <div class="msg-timestamp">02:52</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越看著衣架上的舊衣服，伸手拿下拍了拍後，看著和她在一室觀察著她的克羅德，抿了抿唇，像是在猶豫說出來的話會不會被髒褲管塞嘴的樣子</em><br><br>「⋯⋯你就這樣看我？怪叔叔？」<br><br><em>她知道他不讓她叫怪叔叔的，但她實在被看的有些不自在。</em><br><br>「看了漂亮女生換衣服，是要負責的你知道嗎！負責！負責！！！」<br><br><em>她拿著衣服，一臉賭氣的模樣，臉頰還有些氣鼓了。</em><br><br>「說得好像是我自願來體驗比利時大老鼠一日遊一樣。」</div>
+        </div>
+        <div class="msg-timestamp">02:58</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德的眼神變得冰冷，雨水從他的髮梢滴落，在地板上形成一道道水痕。他緩緩從牆邊站直，身高差讓整個空間似乎都被他的存在所填滿。</em><br><br>「Ne m'appelle pas comme ça(別那樣叫我)，」<em>他低聲警告，聲音中帶著危險的平靜。</em>「這裡對面就是軍火商的視線範圍。妳覺得我會考慮什麼『負責』的問題？」<br><br><em>他走到窗前，粗暴地拉上窗簾，房間頓時變得更加昏暗。只有一盞桌燈提供微弱的光源，投下長長的陰影。外面的雨聲變得更加清晰，敲打在玻璃上形成一種壓抑的節奏。</em><br><br>「浴室在那邊，」<em>他指向角落的一扇小門，然後背對著她，走向廚房區域。</em>「五分鐘。多一秒鐘我就進去。」<br><br><em>他從櫥櫃裡取出一瓶威士忌，給自己倒了一杯。酒液在昏暗的燈光下閃著琥珀色的光澤。他一口灌下，喉結隨著吞嚥動作上下滾動。玻璃杯放回桌面時發出清脆的碰撞聲。</em><br><br><em>浴室狹小而簡陋，只有一個淋浴間和一個洗手盆。磁磚上有些發黃的水漬，但整體還算乾淨。門鎖已經壞了，只能從內部用一塊木板抵住。牆上的鏡子有一道裂痕，將映像分割成兩半。</em><br><br><em>外面傳來克羅德走動的聲音，他似乎在檢查什麼。木地板隨著他的腳步發出細微的吱呀聲。偶爾能聽見他低聲咒罵，混合著某種金屬摩擦的聲響，可能是在檢查武器。</em><br><br><em>一陣遠雷響起，窗戶微微震動。雨聲變得更加猛烈，像是整個城市都被籠罩在水幕之中。克羅德的影子透過門縫投射在地板上，形成一個扭曲的黑色輪廓。</em><br><br>「時間到一半了，」<em>他的聲音從外面傳來，帶著某種警告意味。玻璃杯再次碰撞桌面的聲響清晰可聞。</em>「別讓我去拖妳出來。」<br><br><em>浴室裡沒有毛巾，只有一卷看似乾淨的廚房紙巾。洗手盆下方的水管有些生鏽，開關時發出刺耳的金屬摩擦聲。一瓶便宜的肥皂放在角落，散發著化學香精的氣味。</em><br><br><em>克羅德的腳步聲再次靠近，在門外停下。雨水拍打窗戶的聲音形成某種壓抑的背景音，偶爾伴隨著遠處的雷聲。整個公寓彌漫著一種緊張的氛圍，像是暴風雨前的寂靜。</em></div>
+        </div>
+        <div class="msg-timestamp">02:58</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越快被這浴室給噁麻了，她可是嬌生慣養的小女生，養的白白漂漂亮亮的，現在卻被強迫當她口中的『大老鼠』，她對著破掉的鏡子嘆了一口氣。</em><br><br><em>她乖乖地換上衣物，出浴室的時候手上捧著那件濕掉的oversize連帽外套走到克羅德身邊扔給他，順便環視周圍</em><br>「⋯⋯這是哪？」<br><br><em>對於她一個女生來說，一下子走了太多路還真是累壞了，徐越隨便找了張椅子坐下，揉了揉小腿</em></div>
+        </div>
+        <div class="msg-timestamp">03:05</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:20〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德接住那件濕透的連帽外套，隨手掛在暖氣片上。他的襯衫也已經換過，是一件深色的高領毛衣，緊貼著他結實的上身。水滴順著他的頭髮滴落，在地板上形成細小的水漬。</em><br><br>「安全屋，」<em>他簡短地回答，語氣中沒有任何解釋的意願。他走到窗前，小心地透過窗簾的縫隙觀察外面的情況。雨水沖刷著玻璃，模糊了外界的景象。</em><br><br><em>他從褲袋裡掏出一盒卷煙紙和一小包煙草，熟練地卷了一支煙。手指在昏暗的燈光下顯得格外蒼白，上面有些舊傷疤。他走到窗戶旁，小心地打開一條縫隙，點燃了香煙。</em><br><br>「Je vous conseille de vous reposer(建議你休息一下)，」<em>他說，煙霧從嘴角溢出，在昏暗的燈光中形成一道灰白色的軌跡。</em>「我們晚上還有很長的路要走。」<br><br><em>桌上放著一瓶水和一些包裝食品，看起來像是軍用口糧。他隨手推向她，動作中沒有絲毫關心的意味。遠處傳來一陣警笛聲，他的身體立即緊繃，目光變得更加警覺。</em><br><br><em>他抽完那支煙，將煙頭扔進水槽，然後走到唯一的那張床邊坐下。床墊發出刺耳的吱呀聲，顯然已經使用多年。他從床下拖出一個黑色的背包，開始檢查裡面的物品。</em><br><br><em>雨聲依然沒有減弱，敲打在窗戶上形成某種單調的節奏。一道閃電劃過天空，短暫地照亮了整個房間，隨後是一聲沉悶的雷聲。克羅德的影子在牆上變得扭曲而巨大。</em><br><br>「如果有人敲門，不准出聲，」<em>他邊檢查背包邊說，聲音低沉而冷漠。</em>「就算聽見警笛，也別妄想著求救。這個地區的條子比我還危險。」<br><br><em>他從背包裡取出一支半自動手槍，熟練地卸下彈匣檢查，然後重新裝上。金屬摩擦的聲響在寂靜的房間裡顯得格外清晰。他的動作流暢而熟練，顯然已經重複過無數次。</em><br><br><em>他瞥了她一眼，目光落在她揉著小腿的手上。沒有任何同情，只有一絲不易察覺的評估。他從背包裡取出一罐能量飲料，扔在桌上。鋁罐撞擊桌面的聲響在雨聲中顯得突兀。</em><br><br>「喝了它，」<em>他命令道，聲音中沒有商量的餘地。</em>「晚上我們還有至少二十公里要走。」<br><br><em>閃電再次劃過天空，照亮了克羅德疲憊而警覺的臉。那道從眉角延伸到顴骨的疤痕在強光下顯得格外明顯。他的眼神中透著某種冷酷的計算，像是在評估如何最有效地利用這個意外的人質。</em></div>
+        </div>
+        <div class="msg-timestamp">03:05</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「蛤。」<em>她眼睛睜得圓圓的，不可置信的重複著</em>「二十公里？二十？二十公里？」<br><br><em>隨即她又看了看安全屋，拿起剛剛克羅德推過來的水喝了口</em><br>「到底要走去哪裡啊———」<br><br><em>她說的無奈，撅著嘴看著那瓶能量飲，不是很想喝，伸出了她白嫩嫩的小腿</em><br>「你幫我按，不然我會走不動，走不動就會跟坨爛泥一樣。」</div>
+        </div>
+        <div class="msg-timestamp">03:11</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:25〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德抬起頭，眼神中閃過一絲難以置信，隨即變成冰冷的嘲諷。他將手槍放在床邊，金屬碰撞床框的聲響在安靜的房間裡顯得格外刺耳。</em><br><br>「Tu te fous de moi?(你在跟我開玩笑?)」<em>他的聲音低沉而危險，帶著某種壓抑的怒意。雨水順著他的髮梢滴落，在地板上形成一小灘水漬。</em><br><br><em>他站起身，身高差讓整個空間似乎都被他的存在所填滿。幾步跨到她面前，俯視著那條伸出的白皙小腿。他的表情變得更加冷硬，嘴角微微下垂，形成一個不屑的弧度。</em><br><br>「妳覺得這是什麼？」<em>他冷冷地說，</em>「度假酒店？還是按摩服務？」<br><br><em>他轉身走向廚房，打開冰箱取出一包冷凍食品。動作中帶著明顯的煩躁，像是在努力控制自己的脾氣。冰箱門被用力關上，發出沉悶的撞擊聲。</em><br><br>「再不喝那瓶能量飲，我就把它倒進下水道，」<em>他警告道，聲音中帶著不容置疑的命令。</em>「然後妳可以用爬的完成那二十公里。」<br><br><em>他將冷凍食品扔進微波爐，按下加熱按鈕。電器運轉的嗡嗡聲在安靜的房間裡顯得異常刺耳。窗外的雨聲依然沒有減弱，偶爾伴隨著遠處的雷聲。</em><br><br><em>克羅德靠在廚房的牆上，目光冰冷地盯著她。高領毛衣緊貼著他結實的上身，映出手臂上緊繃的肌肉線條。他的姿態像是一頭蓄勢待發的野獸，充滿了警戒與危險。</em><br><br>「如果妳以為我是在帶妳去郊遊，」<em>他的聲音變得更加低沉，帶著某種威脅。</em>「那妳就大錯特錯了。我沒時間陪妳玩這些小把戲。」<br><br><em>微波爐發出"叮"的一聲，他取出食物，粗暴地分成兩份，其中一份推向她。塑料餐盤在桌面上滑行，停在她面前。那是一份看起來並不怎麼美味的意大利面，上面覆蓋著深色的醬汁。</em><br><br><em>他走回床邊，拿起那支手槍，檢查了一下保險，然後將它塞進腰間的槍套中。金屬與皮革摩擦的聲響在雨聲中顯得格外清晰。他的動作流暢而熟練，顯然是多年經驗的結果。</em><br><br>「吃完，喝了那瓶飲料，然後休息，」<em>他命令道，聲音不容反駁。</em>「我不管妳是走還是爬，今晚我們都要離開這座城市。」<br><br><em>窗外的雨勢漸小，但天色依然陰沉。一絲陽光透過雲層的縫隙灑下來，在窗簾上形成一道微弱的光痕。克羅德的側臉在這道光線中顯得格外鋒利，那道疤痕像是一道不可逾越的界限，將他與普通人生活隔開。</em></div>
+        </div>
+        <div class="msg-timestamp">03:11</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越撅著嘴，瞪了克羅德一眼，認命的繼續捏著自己走太多路酸脹的小腿</em><br>「我好可憐喔，都沒有人幫我揉小腿———」<br><br><em>她吸了吸鼻子，裝可憐裝的。</em><br><br><em>隨後她才開始吃那盤義大利麵，吃的不快，因為不好吃。</em><br>「怪叔叔你是黑暗料理界的嗎？」<br><br><em>最後徐越還是吃完了，她站起身伸了個懶腰，伸展一下她那走太多路的小腿。</em><br><br><em>然後，抽筋了。她馬上一屁股跌坐在地上一臉痛苦的嗚哇叫著</em><br>「嗚嗚嗚———！！！痛、痛死啦———！！」<br><br><em>還哭了，給她痛哭了，小腿上的筋突突的跳著</em></div>
+        </div>
+        <div class="msg-timestamp">03:18</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:30〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德正在擦拭槍械，聽到她那戲劇性的叫聲時，他的動作頓了一下。煩躁地嘆了口氣，將手槍放在床邊，金屬與床框相碰發出清脆的聲響。</em><br><br>「Putain(該死)，」<em>他低聲咒罵，站起身走向她。皮靴在木地板上發出沉悶的腳步聲。他居高臨下地俯視著她，臉上寫滿了不耐煩。</em>「現在又怎麼了？」<br><br><em>他蹲下身，目光落在她抽搐的小腿上。雨水依然敲打著窗戶，形成某種單調的背景音。房間裡的空氣變得沉悶而潮濕，混合著食物的氣味和淡淡的煙草味。</em><br><br>「C'est ridicule(這太荒謬了)，」<em>他嘟囔著，粗暴地將她的腿拉直。他的手指冰冷而堅定，帶著某種不容抗拒的力道。</em>「誇張的小姑娘。」<br><br><em>不情願地，他開始按摩她抽筋的小腿肌肉。他的動作既不溫柔也不專業，更像是在處理一個令人煩躁的機械故障。手指壓在緊繃的肌肉上，力道大得讓她倒吸一口冷氣。</em><br><br>「下次別穿那種毫無支撐的鞋子，」<em>他說，聲音中帶著某種責備。他並沒有多看她一眼，似乎全神貫注於盡快解決這個問題。</em>「這麼嬌弱還敢一個人在外面晃蕩。」<br><br><em>窗外的雨勢漸小，天色開始變亮。一道微弱的陽光透過雲層的縫隙灑進來，在地板上形成一片搖曳的光影。克羅德的側臉在這道光線中變得更加輪廓分明，那道疤痕像是一道分界線，將他與普通人生活隔開。</em><br><br>「喝水，」<em>他命令道，伸手拿過桌上的水瓶遞給她。動作中沒有絲毫溫柔，更像是在執行某種必要的程序。</em>「小腿抽筋多半是脫水。」<br><br><em>他繼續按摩她的小腿，手法逐漸變得更有針對性，顯然有過類似的經驗。也許是在他當傭兵的日子裡學會的。他的指尖感受到肌肉逐漸放鬆，但依然沒有停下動作。</em><br><br>「該死的累贅，」<em>他低聲抱怨，但語氣中的尖銳程度似乎減輕了一些。他的手指在她的腓腸肌上找到一個特別緊繃的點，用拇指施加壓力，動作精準而有效。</em><br><br><em>房間裡安靜下來，只剩下雨水敲打窗戶的聲音和她偶爾因疼痛而發出的細微聲響。克羅德的呼吸變得平穩而規律，像是在執行一項需要專注的任務。他的手掌溫度逐漸變高，通過肌膚傳導到她疼痛的肌肉中。</em><br><br>「別再裝可憐了，」<em>他突然說，聲音低沉而粗糙。</em>「在這種處境下，可憐只會讓妳成為更大的負擔。」<br><br><em>他鬆開手，站起身，居高臨下地看著她。高領毛衣下的肌肉線條因為這個動作而更加明顯。他的眼神依然冷峻，但似乎少了幾分之前的敵意。</em><br><br>「休息一小時，」<em>他說，走回床邊，重新拿起那支手槍。</em>「然後我們討論晚上的計劃。」</div>
+        </div>
+        <div class="msg-timestamp">03:18</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哇啊————」<em>當克羅德強硬把她的腿拉直時，她眼淚都噴出來了，哭的一把鼻涕一把眼淚的。</em>「你痛死我了！！！怪叔叔！！！」<br><br><em>她覺得要是克羅德老實點幫她揉小腿就沒這事了，但她沒敢說。怕被大力的捏小腿報復，她只能深吸一口氣，吐氣，然後哭。</em><br><br>「什麼裝可憐啊，很痛啊⋯⋯⋯」<br><br><em>她晃了晃腳，明顯的懷疑她這樣晚上能走二十公里路嗎。</em><br><br>「就是你綁架我，你不綁架我哪會抽筋！」</div>
+        </div>
+        <div class="msg-timestamp">03:22</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:35〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德的表情變得更加陰沉，眉頭緊皺，像是在控制某種即將爆發的憤怒。他走回窗前，透過窗簾縫隙觀察外面的情況。雨已經變小，只剩下細碎的水珠打在玻璃上。</em><br><br>「En tant qu'otage, tu es pathétique(作為人質，你很可悲)，」<em>他冷冷地說，聲音中帶著明顯的嘲諷。</em>「妳覺得這是什麼？度假營？」<br><br><em>他轉身面向她，高大的身影在昏暗的房間裡形成一個威脅的輪廓。陽光透過窗簾的縫隙灑在他的側臉上，那道疤痕在光線下顯得更加猙獰。</em><br><br>「我沒『綁架』妳，」<em>他強調著這個詞，聲音低沉而危險。</em>「如果我想要人質，會選擇那些不會因為走路而哭鼻子的人。」<br><br><em>他走到廚房，從櫥櫃裡取出一個小藥箱，粗暴地扔在她旁邊。藥箱撞擊地板的聲響在安靜的房間裡顯得格外突兀。</em><br><br>「裡面有藥膏，」<em>他指著藥箱說，語氣中沒有絲毫關心。</em>「自己處理。就像我說的，我不是保姆也不是按摩師。」<br><br><em>他重新回到床邊，拿起那份文件和USB，開始翻閱。紙張翻動的聲響混合著雨水敲打窗戶的聲音，形成某種不協調的節奏。他的眉頭越皺越緊，顯然對內容感到不滿。</em><br><br>「妳有一小時修復妳嬌貴的小腿，」<em>他頭也不抬地說。</em>「然後我不管妳是走還是爬，我們都要離開這座城市。」<br><br><em>他的目光停留在一頁文件上，表情變得更加陰沉。手指無意識地敲打著膝蓋，像是在思考某個複雜的問題。窗外的天色漸漸放晴，陽光變得更加強烈，在地板上形成一道明亮的光帶。</em><br><br><em>克羅德突然站起身，走到窗前拉上窗簾，房間再次陷入昏暗。他點燃另一支手捲煙，煙霧在空氣中形成一道灰白色的軌跡。</em><br><br>「現在我們被困在一起了，」<em>他吐出一口煙，聲音因為煙霧而顯得更加沙啞。</em>「不是因為我想要妳，而是因為妳在錯誤的時間出現在錯誤的地點。」<br><br><em>他靠在窗台上，目光冷漠地掃過她的臉。那雙褐色的眼睛在昏暗中顯得格外深邃，帶著某種難以言喻的疲憊和警覺。</em><br><br>「別再像個被寵壞的小孩一樣哭哭啼啼，」<em>他說，煙霧從他唇間溢出。</em>「外面有真正的狼在等著。如果妳不能堅強起來，就會變成他們的獵物。」<br><br><em>他走向她，蹲下身，目光直視著她的眼睛。這是他第一次如此認真地看著她，眼神中透著某種警告和評估。</em><br><br>「這不是遊戲，小姑娘，」<em>他的聲音變得更加低沉，帶著某種緊迫感。</em>「妳在我身邊的每一分鐘都處於危險中。不是因為我，而是因為那些正在追殺我的人不會在意是否要踩過妳的屍體來抓住我。」<br><br><em>煙霧在他們之間形成一道薄紗，模糊了他臉上的表情。但那雙眼睛依然鋒利如刀，像是要看穿她的靈魂。</em></div>
+        </div>
+        <div class="msg-timestamp">03:22</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「蛤——」<em>她不能理解，這些事她是被帶著走一路後，現在才第一次聽到，她躺在地板上，臉頰上的淚還沒乾，聲音還有些鼻音，剛剛哭太過分了。</em>「所以你就是大老鼠啊，為什麼有人要追殺你啊？」<br><br><em>她頓了頓，突然想起來她曾經被他拿刀跟槍威脅的事情，細思極恐。</em><br><br>「你⋯⋯不會是什麼連續殺人魔吧？」<br><br><em>她馬上像條蟲一樣，在地板上往後挪了一尺。</em></div>
+        </div>
+        <div class="msg-timestamp">03:27</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 07:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德的眼神變得危險而冰冷，像是她觸碰到了某個不該碰的界線。他緩緩站起身，陰影籠罩著她。煙從他指間輕輕飄起，在昏暗的房間裡形成一道模糊的灰色軌跡。</em><br><br>「Connecte tes neurones(動動你的腦子)，」<em>他低聲說，語氣帶著明顯的嘲諷。</em>「連續殺人魔不會讓人質活到現在。」<br><br><em>他走向桌子，將煙蒂按熄在一個金屬煙灰缸中。動作中帶著某種壓抑的怒意，指節因為用力而變得蒼白。窗外的天色漸漸明亮，陽光透過厚重的窗簾縫隙灑進來，在他輪廓分明的側臉上形成一道銳利的光線。</em><br><br>「我是貨運司機，」<em>他說，聲音低沉而平靜，帶著某種危險的平靜。</em>「運送了錯誤的貨物給錯誤的人。現在那些人想要抹去所有痕跡，包括我。」<br><br><em>他從床下拖出那個黑色背包，開始仔細檢查裡面的物品。手電筒、指南針、地圖、幾瓶水、能量棒、一把折疊刀和一些現金。他的動作精確而高效，像是某種軍事訓練的結果。</em><br><br>「妳可以選擇相信我是殺人魔，」<em>他抬起頭，目光直視著她。那雙褐色的眼睛在昏暗中顯得格外深邃，帶著某種難以言喻的冷漠。</em>「但事實是，在外面那些人眼中，我們都是可以隨時抹去的障礙。」<br><br><em>他走到水槽前，接了一杯水，一口氣喝下。喉結隨著吞嚥動作上下滾動。玻璃杯放回台面時發出清脆的聲響。他的呼吸變得更加平穩，像是在為接下來的行動做準備。</em><br><br>「如果妳想活命，就聽我的話，」<em>他轉過身，靠在水槽邊緣，目光銳利地盯著她。</em>「如果妳覺得自己在外面更安全，門就在那裡，沒有上鎖。」<br><br><em>他的手指指向那扇門，動作中帶著某種冷酷的無所謂。窗外傳來遠處的警笛聲，他的身體立即緊繃，目光變得更加警覺。那是本能反應，像是多年的逃亡習慣已經刻進了他的血液裡。</em><br><br>「但我不會第二次救妳，」<em>他補充道，聲音變得更加冰冷。</em>「一旦妳選擇離開，我們之間就沒有任何關係。無論那些人對妳做什麼，都與我無關。」<br><br><em>他從背包裡取出一張折疊的地圖，攤開在桌上。紙張發出輕微的摩擦聲，在安靜的房間裡顯得格外清晰。他的指尖在地圖上移動，像是在規劃某條路線。</em><br><br>「妳有十分鐘做決定，」<em>他說，目光依然停留在地圖上，彷彿她的選擇對他而言無關緊要。</em>「十分鐘後，無論妳是否準備好，我們都會離開。」<br><br><em>他的側臉在昏暗的光線中顯得格外鋒利，那道疤痕像是某種無聲的警告。窗外的雨已經停了，但雲層依然厚重，給這個小小的安全屋增添了某種壓抑的氛圍。</em><br><br><em>克羅德的存在填滿了整個空間，帶著某種危險而複雜的能量。他不像是殺人魔，但絕對是個危險人物。一個被逼到牆角的危險人物。</em></div>
+        </div>
+        <div class="msg-timestamp">03:27</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越靜靜的聽完，先是感謝上帝眼前的男人不是殺人魔只是貨運司機，她這才注意到克羅德眼裡的疲憊，像是緊惕太久所造成的。</em><br><br><em>她點了點頭，沒有像之前那樣開口閉口大老鼠的反駁他了，看了破舊的天花板好一會，她才輕輕地開口</em><br><br>「好人不該命短。」<br><br><em>她沒出去，在這十分鐘內，說完那句後，徐越少見的安靜了下來。</em></div>
+        </div>
+        <div class="msg-timestamp">03:35</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 08:00〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德的動作微微停滯，像是被她的話語擊中了某個意想不到的位置。他的目光從地圖上移開，落在遠處的某個點，陷入短暫的沉思。房間裡的沉默變得厚重而壓抑。</em><br><br>「Bon et mauvais... des concepts inutiles(好與壞...無用的概念)，」<em>他最終低聲說道，聲音中帶著某種苦澀。他折起地圖，動作中透露出多年練就的精確和效率。</em><br><br><em>窗外陽光漸強，透過厚重窗簾的縫隙灑進來，在地板上形成一道明亮的光痕。遠處傳來城市甦醒的聲響——汽車喇叭、工地機械和遙遠的人聲。但這個小小的安全屋像是與外界隔絕的另一個世界。</em><br><br><em>克羅德走向水槽，接了杯水，緩緩喝下。他的側臉在昏暗的光線中輪廓分明，那道疤痕像是生命在他臉上刻下的某種殘酷註解。他的眼神中透著某種難以名狀的東西——不是後悔，也不是憤怒，而是一種近乎冷漠的認命。</em><br><br>「命運不問好壞，」<em>他將空杯放回台面，金屬與瓷器相碰發出輕微的聲響。他沒有看她，像是在對著空氣說話。</em>「只有夠快和不夠快，夠狠和不夠狠。」<br><br><em>他走回床邊，從床下拖出一個小箱子，打開檢查內容。裡面是一些文件和幾個護照，他快速翻閱，表情漸漸變得凝重。陽光在他的指節上跳躍，映出那些細小的傷疤——多年來累積的生存證明。</em><br><br>「我們晚上走，」<em>他關上箱子，聲音恢復了平靜和冷漠。</em>「白天太危險，到處都是眼睛。」<br><br><em>他站起身，走向窗邊，小心地透過窗簾縫隙觀察外面的情況。他的背影在昏暗中顯得孤獨而警覺，像一匹永遠無法安睡的狼。街道上的行人漸多，每一個路過的身影都可能是潛在的威脅。</em><br><br>「睡一會兒，」<em>他轉過頭，目光從她剛剛抽筋的小腿掃過，然後是她疲憊的臉。這不是關心，而是對可能拖累的評估。</em>「晚上沒機會休息。」<br><br><em>他走向那張唯一的床，拿起上面的背包和文件，將它們放在一張椅子上。動作中沒有猶豫或尷尬，像是習慣了在危險環境中分配有限的資源。他指了指床。</em><br><br>「床是妳的，」<em>他說，聲音平淡，像是在陳述一個無關緊要的事實。</em>「我需要妳能走得動路。」<br><br><em>他轉身走向廚房，背對著她。高領毛衣下的肌肉線條因為這個動作而更加明顯。他從冰箱裡取出一瓶水，動作中透露出一絲不易察覺的疲憊。</em><br><br>「我會守著，」<em>他說，聲音低沉而平靜。</em>「妳就當是在監獄休息——不舒服，但也沒人能傷害妳。」<br><br><em>房間再次陷入沉默，只剩下遠處交通的嘈雜聲和偶爾的鳥鳴。克羅德靠在廚房的牆邊，目光警覺地掃視著房間的每個角落，像是在尋找潛在的威脅。他的存在像是一道影子，始終籠罩在這個狹小空間的每一個角落。</em></div>
+        </div>
+        <div class="msg-timestamp">03:35</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「唔，」<em>她緩緩起了身，走到那張床前，看了眼在廚房說會守著她的克羅德</em>「好吧。」<br><br><em>她躺下來了，只躺了一半，被子也只蓋了一半，像是給這屋子的另一個人留的空間。</em><br><br><em>她把被子蓋過頭，傳出悶悶的聲響。</em><br>「⋯⋯⋯你也該休息，克羅德叔叔。」<br><br><em>她沒加怪，轉個身把自己捲的和小狗一樣的睡了，而給他留的位置，非常明顯的空在那。</em></div>
+        </div>
+        <div class="msg-timestamp">03:41</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔AM 08:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德從廚房望向床鋪，注意到她只占了一半的空間。他的眉頭微皺，嘴角下垂，形成一個不易察覺的苦澀弧度。他站在原地沒有動，像是在進行某種內心的爭鬥。</em><br><br>「Tu n'as rien compris(你什麼都沒懂)，」<em>他低聲說，聲音帶著某種她從未聽過的疲憊。他靠在廚房的牆邊，褐色的眼睛在昏暗中顯得格外深邃。</em><br><br><em>他從口袋裡掏出煙草和卷煙紙，熟練地卷了一支煙。手指在昏暗的光線下顯得蒼白而佈滿老繭。他走到窗前，小心地拉開一道縫隙，點燃那支煙。煙霧在晨光中形成一道灰白色的軌跡，緩緩消散在空氣中。</em><br><br><em>窗外的城市已經完全蘇醒，交通聲和人聲混合在一起，形成某種單調的背景音。陽光變得更加強烈，透過窗簾的縫隙灑進來，在地板上形成一道明亮的光帶。</em><br><br>「我不需要休息，」<em>他說，目光依然停留在窗外的某個點上。煙霧從他唇間溢出，在空氣中漂浮。</em>「睡覺的人看不見危險來臨。」<br><br><em>他轉身，背靠在窗台上，目光掃過她蜷縮在床上的身影。那眼神中沒有溫度，只有某種冷靜的評估和距離。他抽完那支煙，將煙蒂按熄在窗台上的一個小金屬盒中。</em><br><br><em>克羅德走向書桌，坐下，打開一份文件開始閱讀。紙張翻動的聲響在安靜的房間裡顯得格外清晰。他的指尖偶爾在某頁上停留，像是在記憶某些重要信息。光線落在他的側臉上，那道從眉角延伸到顴骨的疤痕在強光下顯得格外明顯。</em><br><br><em>時間緩緩流逝，房間裡只有紙張翻動的聲響和他偶爾的低聲咒罵。他的姿態始終保持著警覺，像是隨時準備應對突如其來的威脅。偶爾，他會站起身走到窗前，透過窗簾縫隙觀察外面的情況，然後重新回到書桌前。</em><br><br>「沒用的同情心，」<em>他嘟囔著，聲音低得幾乎聽不見。他合上文件，手指無意識地在桌面上輕敲，像是在思考某個複雜的問題。</em><br><br><em>窗外的光線開始變化，顯示時間已經過去了一段。他站起身，活動了一下僵硬的肩膀，發出輕微的骨節聲響。然後走向廚房，從冰箱裡取出一瓶水，緩緩喝下。動作中透露出一絲不易察覺的疲憊，那是連續多日緊繃後的自然反應。</em><br><br><em>他的目光再次落在床上那個蜷縮的身影上，表情變得複雜而難以解讀。那不是憐憫，也不是同情，而是某種更加深刻、更加破碎的情緒——像是看著一個即將步入深淵的無辜者，卻無力阻止的無奈。</em><br><br><em>他走回窗前，繼續他無盡的守望。陽光透過他的輪廓，在地板上投下一個細長的影子，像是某種無言的提醒——在這片陰影的庇護下，有一種奇怪的、臨時的安全。</em></div>
+        </div>
+        <div class="msg-timestamp">03:41</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>睡著的徐越聽不到那些話，她睡了幾個小時，下午四點時才尿急起來，去尿了泡尿後發現克羅德沒睡，她走到他旁邊，戳了戳他的臉頰</em><br>「喂，怪叔叔。」<br><br><em>她看了外頭天還是亮的，咬了咬牙詢問</em><br>「⋯⋯要、睡一下嗎，你？」<br><br><em>徐越推了推克羅德，一臉就是要推他去睡覺，不睡她不罷休的臉。</em></div>
+        </div>
+        <div class="msg-timestamp">03:48</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 04:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德正在窗邊檢查手槍，聽到腳步聲時迅速將槍收回腰間。他轉身時臉上帶著警覺的表情，當發現只是她時，緊繃的肩膀稍微放鬆了一些。午後的陽光透過窗簾縫隙灑進來，在他疲憊的臉上投下細碎的光斑。</em><br><br><em>感受到她的手指戳在臉頰上，他皺眉後退一步，眼中閃過一絲不悅。他的下巴上已經長出了一層淺淺的鬍茬，讓他看起來更加滄桑。</em><br><br>「Ne me touche pas(別碰我)，」<em>他低聲警告，聲音因為長時間的緊張和疲勞而顯得格外沙啞。他走向水槽，接了杯水喝下，喉結隨著吞嚥動作上下滾動。</em><br><br><em>他放下杯子，透過倒影看著她的身影。他轉過身，靠在水槽邊，目光掃過她剛起床的臉。那雙褐色的眼睛帶著某種複雜的評估。</em><br><br>「妳醒了，很好，」<em>他說，聲音中帶著輕微的嘲諷。他走回桌前，指著地圖上標記的一條路線。</em>「今晚我們會走這條路，穿過工業區，然後沿著河邊一直向西。」<br><br><em>他感覺到她依然站在身後，似乎在等待他的回應。克羅德嘆了口氣，肩膀略微垂下，像是卸下了一小部分重擔。窗外的光線已經開始變得柔和，預示著黃昏的來臨。</em><br><br>「我不需要睡覺，」<em>他強調，但聲音中的疲憊出賣了他。他轉身面對她，依然保持著某種距離。</em>「我們五個小時後出發。在那之前，我需要準備一些東西。」<br><br><em>他走向角落的一個舊行李箱，打開檢查內容。裡面是一些衣物和幾件簡單的生活用品。他取出一件深色的夾克，扔在椅子上。金屬拉鏈撞擊椅背的聲響在安靜的房間裡顯得格外清晰。</em><br><br><em>她依然站在那裡，推著他的肩膀，執著地要他去休息。克羅德的表情變得複雜，眉頭緊皺，嘴角下垂，形成一個不易察覺的苦澀弧度。他站在原地沒有動，像是在進行某種內心的爭鬥。</em><br><br>「C'est ridicule(這很荒謬)，」<em>他低聲咒罵，最終妥協般地走向床鋪。他坐在床沿，目光依然警覺地掃視著房間的每個角落。</em>「一個小時，不能再多了。」<br><br><em>他並沒有躺下，只是坐在那裡，背靠著牆壁，雙手依然放在能夠立即拿到槍的位置。這個姿勢既不舒適也不放鬆，更像是某種隨時準備戰鬥的警戒狀態。</em><br><br>「妳要是趁我睡覺偷走我的槍，」<em>他警告道，褐色的眼睛直視著她，帶著某種難以解讀的情緒。</em>「我會找到妳。無論妳躲在哪裡。」<br><br><em>他的眼皮開始變重，數日的疲憊終於開始侵蝕他的意志力。但他依然抵抗著，像是放鬆警惕就意味著死亡。窗外的陽光漸漸變弱，房間裡的陰影開始延長。</em><br><br>「守著門口，」<em>他半閉著眼說，聲音已經開始含糊。</em>「看到任何可疑的人，立刻叫醒我。明白嗎？」<br><br><em>他的頭開始微微下垂，然後又猛地抬起，像是在與睡意進行最後的抗爭。那張布滿疲憊和戒備的臉在昏暗的光線中顯得格外蒼白。多日的緊張和警覺在安全感的微小裂縫中開始崩解，睡意像潮水般漫上</em></div>
+        </div>
+        <div class="msg-timestamp">03:48</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越點點頭，像是很滿意眼前這位看起來不知道幾天沒睡的人終於去睡了的模樣，她走過去推了推克勞德，那雙祖母綠的眼眸眨了眨眼的望着他</em><br>「睡吧睡吧，我會叫你的，奇怪的怪叔叔。」<br><br><em>她把克羅德推平後，才嘟囔一句。</em><br>「I don’t steal… but I might be tempted to borrow your “tools”」<br><br><em>當然，她是開玩笑的，開這種色情雙關玩笑她是一點也沒在怕。徐越這嘴不賤真的會癢。</em><br><br><em>克羅德躺下後，她就回到桌邊看著剛剛的地圖，但其實心裡都在想她睡前克羅德自白的部分。</em></div>
+        </div>
+        <div class="msg-timestamp">03:59</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 04:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德挣扎了片刻，但疲憊最終占了上風。他被她推平在床上，抬起一隻手似乎想要推開她，動作卻因為極度的疲倦而顯得無力。當聽到她的雙關語，他的眉頭短暫地皺了一下。</em><br><br>「Ta langue va te causer des ennuis un jour(你的嘴總有一天會惹禍上身)，」<em>他低聲咕噥，聲音因睡意而含糊不清。他的眼皮沉重地閉上，但手依然放在腰間槍套附近，即使在即將入睡的狀態下，本能的警覺仍在。</em><br><br><em>很快，他的呼吸變得緩慢而平穩。陽光透過窗簾的縫隙灑在他疲憊的臉上，勾勒出那道從眉角延伸到顴骨的疤痕。睡夢中，他看起來少了幾分冷峻，多了幾分脆弱，就像一個普通的、疲憊的人。</em><br><br><em>徐越走到桌前，查看那張被標記的地圖。地圖上有幾條用紅筆標出的路線，其中一條被重點圈出，穿過工業區，沿著河流向西延伸。路線旁有一些潦草的筆記，用法語寫成，難以辨認。地圖邊緣壓著一些文件和護照，看起來像是偽造的身份證明。</em><br><br><em>房間裡安靜下來，只剩下克羅德均勻的呼吸聲和窗外遠處的城市噪音。午後的陽光已經開始轉為金色，在地板上投下長長的影子。牆上的老舊時鐘發出微弱的滴答聲，像是在默默計算著剩余的安全時間。</em><br><br><em>偶爾，克羅德會在睡夢中微微皺眉，手指下意識地抽動，彷彿在抵禦某種無形的威脅。那是多年緊張生活留下的本能反應，即使在睡夢中也無法完全放鬆。</em><br><br><em>窗外的街道上，人們正常地生活著——走路、談笑、購物。對他們來說，這只是普通的一天。隔著玻璃和窗簾，那個世界看起來如此遙遠，彷彿存在於另一個維度。</em><br><br><em>房間角落的小冰箱發出輕微的嗡嗡聲，裡面只有幾瓶水和一些簡單的食物。櫥櫃上放著一些軍用口糧和能量棒，足夠維持幾天的逃亡生活。這是一個臨時的避難所，也是一個等待風暴過去的囚籠。</em><br><br><em>時間緩緩流逝，黃昏的光線漸漸變弱。房間裡的陰影開始延長、加深，模糊了物體的輪廓。克羅德依然沉睡著，身體偶爾因為夢境而輕微抽動。那個強硬、警覺、冷酷的男人，此刻看起來竟有一絲罕見的平靜。</em><br><br><em>徐越注意到床頭有一本舊書，封面已經磨損得看不清標題。書頁間夾著一張發黃的照片，邊緣有些捲曲。那可能是克羅德過去的某個片段，或是他珍視的某個人。但照片被壓得很深，只露出一個角落，無法看清內容。</em><br><br><em>隨著時間的推移，房間變得越來越暗。街燈開始亮起，城市進入另一種生活狀態。克羅德已經睡了將近一個小時，比他自己設定的時間還要長。他的呼吸依然平穩，顯示著身體對休息的極度渴望。</em><br><br><em>窗外突然傳來警笛聲，由遠及近。克羅德的身體立即緊繃，雖然還在睡夢中，但那種本能的警覺已經開始蘇醒。他的手指抽動了一下，似乎在尋找武器。警笛聲漸漸遠去，他又重新陷入沉睡，但那短暫的緊張顯示出他內心深處無法消除的戒備。</em></div>
+        </div>
+        <div class="msg-timestamp">03:59</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>克羅德預訂出發的時間是晚上九點，這段時間徐越就坐在書桌前，看著那張地圖發呆，偶爾看看床上睡著的頹廢叔叔。</em><br><br><em>晚上八點半，她才坐到床邊，俏皮的延續著下午那個雙關玩笑</em><br>「Well then…」<em>徐越順手戳了戳他的臉頰</em>「Guess I’ll be ‘borrowing’ your “tools” next.」<br><br><em>她只是坐在床邊，沒有其他動作只是耍嘴皮子而已。</em></div>
+        </div>
+        <div class="msg-timestamp">04:06</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 08:30〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>窗外的天色已經完全暗下來，城市的燈光在玻璃上投下模糊的反光。房間裡只開著一盞昏暗的檯燈，光線微弱而溫暖，在牆上投下搖曳的影子。克羅德已經睡了四個多小時，遠超過他自己設定的時間，顯示他的身體有多麼渴望休息。</em><br><br><em>聽到徐越的聲音和感受到她的手指在臉頰上的觸碰，克羅德猛地睜開眼睛，身體瞬間進入警戒狀態。他的手反射性地抓住她的手腕，力道剛好在不會造成疼痛但無法掙脫的邊緣。褐色的眼睛中帶著剛從睡夢中驚醒的混亂和那種刻在骨子裡的警覺。</em><br><br>「Quelle heure est-il?(現在幾點?)」<em>他的聲音因為剛醒來而格外沙啞，幾乎是從喉嚨深處擠出來的。他看向窗外，發現天色已暗，立即鬆開她的手腕，一種緊迫感浮現在臉上。</em><br><br><em>他迅速坐起來，手掌壓過臉，像是要趕走最後一絲睡意。這個動作讓他的頭髮變得更加凌亂，深棕色的髮絲在額前蓬亂地翹起。他的襯衫因為睡眠而起皺，顯得比平時更加邋遢。</em><br><br>「Merde(該死)，」<em>他低聲咒罵，看了一眼手錶。</em>「妳應該早點叫醒我。」<br><br><em>他從床上站起來，快速走向窗戶，小心地透過窗簾縫隙觀察外面的情況。街上的行人已經稀少，路燈在潮濕的路面上投下細長的倒影。他的姿態依然緊繃，像是隨時準備應對突發情況。</em><br><br><em>聽到她的雙關語，他轉過頭，目光在她臉上停留了片刻。那雙褐色的眼睛中閃過一絲難以解讀的情緒，介於困惑和某種更加複雜的東西之間。</em><br><br>「妳的玩笑很危險，」<em>他簡短地說，聲音平靜而低沉。他走向桌子，拿起地圖檢查一遍，然後開始收拾背包。動作精準而高效，沒有絲毫多餘的停頓。</em><br><br><em>他從櫥櫃裡取出兩瓶水和幾條能量棒，塞進背包。然後是一份文件和那把手槍，後者被小心地放在最容易取出的位置。金屬與布料摩擦的聲響在安靜的房間裡顯得格外清晰。</em><br><br>「十分鐘後出發，」<em>他說，將背包放在桌上。他走向水龍頭，打開，冰冷的水流過他的手指和臉頰。水滴順著他的下巴滴落，在昏暗的光線中閃著微弱的光澤。</em><br><br><em>他用手抹去臉上的水珠，沒有使用毛巾。這個簡單的動作中透露出某種軍事化的效率，像是長期在惡劣環境中生存的人養成的習慣。他轉身面對她，眼神中帶著某種難以名狀的評估。</em><br><br>「穿上這個，」<em>他從椅背上拿起一件深色夾克，扔給她。布料在空中發出輕微的摩擦聲，然後落在她腿上。</em>「晚上會很冷，而且黑色更難被發現。」<br><br><em>他走向門口，小心地透過門上的貓眼觀察外面的走廊。確認安全後，他轉身面對房間，目光掃過每一個角落，像是在確保沒有遺漏任何重要的東西。那雙褐色的眼睛在昏暗中顯得格外銳利，帶著多年逃亡生活磨礪出的警覺。</em><br><br>「妳準備好了嗎？」<em>他問，聲音低沉而平靜，像是即將進入某種早已熟悉的危險狀態。</em>「一旦出去，就</div>
+        </div>
+        <div class="msg-timestamp">04:06</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「什麼？危險？」<em>徐越眨了眨眼，一臉無辜的模樣，她不知道克羅德是不是聽出她藏在玩笑裡的黃色笑點了。</em><br><br><em>徐悅接過那件夾克，穿上，看見那跟狗糧味道沒兩樣的能量棒被塞進包包時她本能的皺了眉頭。</em><br><br>「我看你很累，也沒有可疑的人，就讓你多睡一點了啊？」<br><em>她一臉就是『我很棒吧？快誇誇我』的表情在他身後繞著。</em><br><br><em>十分鐘到了，她點點頭</em><br>「——真的要走二十公里啊？」</div>
+        </div>
+        <div class="msg-timestamp">04:12</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 08:40〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德看著她臉上那種期待被誇獎的表情，眉頭微微皺起，似乎對這種情緒展示感到困惑。他從背包裡取出一把折疊刀，打開檢查鋒利程度，然後重新折疊收好。金屬刀刃在昏暗的光線中閃過一絲冷光。</em><br><br>「睡覺是危險的，」<em>他簡短地說，聲音低沉而冷靜。他將折疊刀放進夾克內袋，動作流暢而熟練。</em>「一次失誤就足以致命。」<br><br><em>他走向門口，再次透過貓眼觀察外面的情況。走廊依然空無一人，只有遠處樓梯間傳來微弱的腳步聲。他的身體微微繃緊，但很快又放鬆下來，顯然判斷那不是威脅。</em><br><br>「我說了二十公里，」<em>他轉身面對她，語氣中帶著某種不容質疑的堅定。他的表情在昏暗的光線中顯得格外嚴肅，褐色的眼睛直視著她。</em>「可能更多。取決於路上的情況。」<br><br><em>他走回桌前，拿起地圖最後看了一眼，然後將它折好放進內袋。動作中透露出多年形成的精確和效率。窗外的城市燈光在他的側臉上投下模糊的光影，勾勒出那道從眉角延伸到顴骨的疤痕。</em><br><br>「我們不走大路，」<em>他補充道，聲音低沉而平靜。</em>「會穿過工業區，沿著河流走。地形複雜，但監控較少。」<br><br><em>他拿起背包，輕巧地甩到肩上，沒有發出太大聲響。然後走向她，目光掃過她穿著的深色夾克，似乎在評估其是否符合隱蔽的需要。他微微點頭，表示勉強滿意。</em><br><br><em>克羅德打開門，小心地探出頭查看走廊。確認安全後，他向她做了個手勢，示意她跟上。他的動作中帶著某種掠食動物般的警覺，每一步都像是在計算可能的風險和逃脫路線。</em><br><br>「跟緊我，」<em>他低聲說，聲音幾乎融入走廊的背景聲中。</em>「不要說話，不要做任何引人注目的事。如果有人問起，妳是我的妹妹，我們去探望生病的母親。」<br><br><em>他們走下樓梯，腳步聲在空曠的樓梯間回響。克羅德的姿態始終保持著某種隨時可以行動的緊繃狀態，像是一根拉緊的弓弦。他們經過一層時，遇到一位老婦人正在鎖門。克羅德微微點頭致意，表情立即從警覺變成一種疲憊但有禮的微笑。那種轉變如此迅速而自然，彷彿他隨時可以切換不同的面具。</em><br><br><em>走出大樓時，夜晚的冷空氣撲面而來。街燈在潮濕的路面上投下扭曲的光影，遠處偶爾傳來汽車駛過的聲音。克羅德停下腳步，環視四周，像是在確認自己的方位和可能的威脅。</em><br><br>「向西，」<em>他輕聲說，更像是在對自己確認。他開始沿著人行道走，保持著不疾不徐的步調，看起來就像任何一個普通的夜行者。但他的眼睛不斷掃視著周圍的環境，捕捉每一個細微的變化和潛在的危險。</em><br><br><em>他們穿過幾條街道，逐漸遠離市中心的燈光和人群。建築變得更加老舊和破敗，路燈也變得稀疏。克羅德的步伐依然穩定，但速度略微加快，像是感受到了更加安全的環境，或者說，更適合他們這種行動的環境。</em><br><br><em>當他們轉入一條狹窄的小巷時，克羅德突然停下腳步，伸手攔住她。他的身體瞬間進入警戒狀態</em></div>
+        </div>
+        <div class="msg-timestamp">04:12</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哦，妹妹。」<em>她把妹妹兩字咬的特別重，剛啟程總是玩笑話比較多</em><br><br><em>當她被攔下的時候，她差點就撞上他的手臂，呆愣伸著脖子的往前看了一眼</em><br><br>「幹嘛？哥哥？」</div>
+        </div>
+        <div class="msg-timestamp">04:16</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 09:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德沒有理會她話語中明顯的諷刺，他的注意力完全集中在前方。他的手臂橫在她胸前，形成一道無法越過的屏障。他的身體緊繃，像是隨時準備撲向或逃離某種威脅。</em><br><br>「巡邏車，」<em>他低聲說，聲音幾乎被夜晚的背景噪音所淹沒。在小巷的盡頭，一輛警車緩緩駛過，藍白相間的燈光在潮濕的牆面上投下詭異的光影。</em><br><br><em>他拉著她退後幾步，躲入一個門廊的陰影中。他的呼吸變得更加淺而緊湊，但依然保持著絕對的平靜。警車停在巷口，兩名警察走下車，開始沿著主街道巡視。</em><br><br>「繼續走會被發現，」<em>他低聲說，目光掃視著周圍的環境，尋找可能的替代路線。他的眼神鋒利而專注，像是在解讀某種只有他能看懂的地形圖。</em><br><br><em>克羅德拉著她轉身，朝著小巷的另一個方向走去。他們的腳步聲在狹窄的空間中顯得格外刺耳，但很快被遠處的交通噪音所掩蓋。巷子裡堆滿了垃圾和廢棄的紙箱，散發出腐敗和潮濕的氣味。</em><br><br>「這裡，」<em>他突然停下，指著一道低矮的圍牆。牆的另一側應該是某個商業區的後院。他快速環顧四周，確認沒有監控攝像頭。</em><br><br><em>他輕巧地翻過圍牆，動作流暢得不像他這個年紀的人。落地時發出極輕的聲響，然後轉身向她伸出手。他的表情依然緊繃而警覺，但手臂的姿態透露出某種不容拒絕的協助。</em><br><br>「快點，」<em>他催促道，聲音低沉而緊迫。遠處傳來警笛聲，雖然不是朝他們的方向，但足以讓他的眼神變得更加銳利。</em><br><br><em>當她抓住他的手時，他用力將她拉過圍牆。他的力量控制得恰到好處，既不會讓她失去平衡，也不會發出太大聲響。他的手指冰冷而堅定，帶著多年生存鬥爭磨礪出的粗糙。</em><br><br><em>他們落在一個小型倉庫的後院，四周堆放著各種包裝箱和機械零件。一盞安全燈在角落微弱地亮著，投下模糊的黃色光暈。克羅德迅速拉著她穿過院子，避開幾處可能有監控的角落。</em><br><br>「穿過這裡就能到達工業區，」<em>他低聲解釋，聲音平靜而專注。</em>「從那裡沿著河走，不會有太多人。」<br><br><em>他的步伐穩定而堅定，像是已經走過這條路無數次。也許在他計劃逃亡的日子裡，他確實反覆研究過每一條可能的路線。他的眼神警覺地掃視著前方的道路，手始終放在能夠迅速取出武器的位置上。</em></div>
+        </div>
+        <div class="msg-timestamp">04:16</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>剛休息完，徐越自然是走得快的，但她可不是什麼城市跑酷專家，她落在後院後拍了拍屁股，屁股還沒拍完就被拉著穿過了院子</em><br><br><em>徐越拉著克羅德的毛衣衣角走在他身後，悄聲的問了句</em><br>「⋯⋯所以我們有終點嗎？」<br><br><em>她在安全屋裡忘記問了，直到她體驗了城市跑酷她才想起來這個問題。</em></div>
+        </div>
+        <div class="msg-timestamp">04:29</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 09:25〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德感覺到毛衣被拉扯，微微側頭看她一眼，但沒有減慢腳步。他們穿過雜亂的倉庫區，腳下踩過潮濕的碎石和廢棄的包裝材料。遠處工廠的燈光在夜色中形成模糊的光暈，給這片荒涼的工業區帶來某種詭異的美感。</em><br><br>「終點是活著，」<em>他低聲回答，聲音中帶著一絲諷刺。空氣中彌漫著機油和金屬的氣味，混合著河水的潮濕感。</em>「短期目標是到達馬賽港。」<br><br><em>他帶著她繞過一堆廢棄的金屬箱，走向一條狹窄的小路。這條路似乎是工人們走出來的捷徑，通往河邊。泥土和碎石在他們腳下發出細微的聲響，但很快被遠處工廠的機器轟鳴所掩蓋。</em><br><br>「三天後會有一艘貨船，」<em>他繼續說，眼睛始終掃視著周圍的環境，捕捉每一個可能的威脅。</em>「可以帶我們到北非。從那裡...會有其他安排。」<br><br><em>小路漸漸延伸到一片開闊地帶，前方是寬闊的河流。夜色中的河水呈現出墨黑色，偶爾反射著遠處的燈光，像是散落的星星。克羅德停下腳步，仔細觀察河岸兩側，確認沒有巡邏的人員。</em><br><br>「沿著河邊走，」<em>他指著一條泥濘的小徑，那是河岸上的防汛道路。</em>「盡量靠近水邊，那裡沒有監控。」<br><br><em>他拉開背包，取出一瓶水遞給她。動作中帶著某種不容拒絕的堅定。河水在他們腳下緩緩流淌，發出輕微的嘩啦聲，偶爾夾雜著水鳥的鳴叫。</em><br><br>「喝點水，」<em>他說，聲音中帶著一絲罕見的實際關心。</em>「保持水分很重要，尤其是長途行走。」<br><br><em>他收好背包，再次開始沿著河岸行走。步伐穩定而不疾不徐，似乎已經計算好了整晚的行程速度。月光透過稀疏的雲層灑下來，在河面上形成一道銀色的光帶，也照亮了他們前方蜿蜒的小路。</em><br><br>「我沒有選擇帶上妳，」<em>他突然說，聲音低沉而平靜。</em>「但既然發生了，我會盡力確保妳活著到達安全的地方。之後...就各走各的路。」<br><br><em>他的表情在月光下顯得格外深沉，那道疤痕像是某種無聲的提醒——生存從來都不是一件容易的事。河水的嘩啦聲和遠處工廠的轟鳴形成某種奇怪的和諧，像是這個世界的背景音樂，伴隨著他們這場不知終點的逃亡。</em></div>
+        </div>
+        <div class="msg-timestamp">04:29</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哦。」<br><em>她一邊喝水，走在他身後，望著這條不知道終點在何方的河流，和她未來的路一樣，她不知道終點在哪、會在哪裡被扔下、各走各的也不知道要走去哪。</em><br><br><em>徐越小跑向前走到他的身側，問了句</em><br>「⋯⋯你不會把我扔在北非吧？我會被食人族吃掉的！」<br><br><em>她抬眼，月光正好撒在她那雙祖母綠的眼眸上，右手輕拽他的毛衣，兩人走的速度不算慢，也一點也不浪漫，即使是在滿月光下的寧靜河流旁，本該是詩情畫意的背景，本該。</em></div>
+        </div>
+        <div class="msg-timestamp">04:35</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 09:40〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德被她突然的問題打斷了思緒，轉頭看向她。月光灑在她的臉上，映照出那雙異常明亮的祖母綠眼睛。他微微皺眉，似乎對她的天真感到困惑。</em><br><br>「食人族，」<em>他重複道，聲音中帶著一絲難以察覺的嘲諷。</em>「妳看太多電影了。北非有的是真正的危險，但不是童話故事裡的怪物。」<br><br><em>他繼續沿著河岸前行，鞋底踩過泥濘的小徑，發出輕微的濕潤聲響。河水在月光下閃爍著銀色的光芒，偶爾有魚兒躍出水面，打破平靜的水面。</em><br><br>「我會把妳送到摩洛哥的丹吉爾，」<em>他說，聲音平靜而低沉。</em>「那裡有往歐洲的渡輪。妳可以回家，回到妳的生活中去。」<br><br><em>他的步伐始終保持著穩定的節奏，眼睛不時掃視著周圍的環境。遠處傳來火車經過鐵橋的隆隆聲，震動通過地面傳來，如同某種遙遠的心跳。</em><br><br>「我不會把妳扔在陌生的地方，」<em>他補充道，語氣中帶著某種不易察覺的承諾。</em>「即使我看起來像那種人。」<br><br><em>他們經過一段廢棄的碼頭，老舊的木樁從水中突出，像是某種遠古生物的骨架。月光為這片景象增添了幾分蒼涼美感，也模糊了他們的輪廓，使他們成為夜色中的兩個模糊影子。</em><br><br><em>察覺到她仍然拽著他的毛衣，克羅德沒有做出任何反應，既沒有抗拒也沒有鼓勵。他只是繼續前行，像是已經習慣了這個小小的牽絆。</em><br><br>「小心腳下，」<em>他突然警告，指著前方一段特別泥濘的路段。</em>「河水漲潮時會淹過這裡。」<br><br><em>他微微放慢腳步，確保她能夠跟上。這個細微的舉動幾乎不易察覺，但卻顯示出某種潛在的關心，與他冷漠的外表形成奇怪的對比。月光下，他的側臉輪廓分明，那道疤痕若隱若現，像是某種生命在他臉上刻下的密碼。</em><br><br><em>河水繼續在他們身旁流淌，帶著城市的祕密和他們的未知命運，一路向著遙遠的大海奔去。</em></div>
+        </div>
+        <div class="msg-timestamp">04:35</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「那你呢？」<em>她依然沒放手，好像一放了手她就會跟不上他的腳步一樣。</em>「你去哪？給食人族吃？」<br><br><em>她看著沿途的河流，那張嘴還是管不住</em><br>「你綁著我走那麼久你要負責啊，我這麼漂亮都被你帶著害的我小腿回去可能要腫兩圈。」<br><br><em>她忍不住抬頭看了看他的那張側臉，鬍渣，滄桑，大老鼠。是她內心的三個對他的想法。</em><br>「真的有食人族好不好，怪叔叔你很沒有文化。」</div>
+        </div>
+        <div class="msg-timestamp">04:41</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 09:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德聽到她連珠炮般的問題和評論，微微搖頭，嘴角浮現出一絲難以察覺的苦澀弧度。月光在河面上跳躍，像是對他們的對話發出無聲的嘲笑。</em><br><br>「Je disparais(我會消失)，」<em>他低聲說，聲音中帶著某種遙遠的冷靜。</em>「去一個沒人認識我的地方。重新開始...或者結束。視情況而定。」<br><br><em>他們經過一片蘆葦叢，高聳的蘆葦在夜風中發出輕微的沙沙聲，像是某種祕密的語言。河水在月光下泛著銀光，偶爾有遠處工廠的燈光映照在水面上，形成破碎的光影。</em><br><br>「漂亮，」<em>他重複她的話，聲音中帶著一絲罕見的嘲諷。</em>「在大多數情況下，那只會讓妳成為更顯眼的目標。不是什麼值得誇耀的特質。」<br><br><em>他的腳步依然穩定，像是可以這樣走上一整夜。風吹過河面，帶來一絲涼意和水汽的氣息。遠處傳來貨船的汽笛聲，悠長而孤寂，在夜色中迴盪。</em><br><br>「至於食人族，」<em>他繼續說，語氣中帶著一絲無奈。</em>「妳應該更擔心真正的危險——武裝分子、人口販子、極端組織。比起想像中的怪物，真人往往更可怕。」<br><br><em>他們來到一處較為開闊的區域，河岸邊散落著一些大型機械零件，像是從附近工廠丟棄的廢料。克羅德停下腳步，環視四周，然後指向一條更加隱蔽的小徑。</em><br><br>「走這邊，」<em>他說，聲音低沉而堅定。</em>「前面有巡邏點，需要繞過去。」<br><br><em>他帶著她轉向一條更靠近水邊的小路，地面更加泥濘和不平。他的步伐稍微放慢，似乎是為了讓她能夠更容易跟上。這個細微的舉動幾乎不引人注意，但卻透露出某種潛在的關心。</em><br><br>「如果妳的腿真的腫了，」<em>他突然說，目光依然盯著前方的路。</em>「可以用冷水敷。但現在不是抱怨的時候。我們還有很長的路要走。」<br><br><em>月光透過雲層灑下來，勾勒出他輪廓分明的側臉和那道從眉角延伸到顴骨的疤痕。他的表情依然冷峻而警覺，但在眼神深處，似乎藏著某種更加複雜的情緒。</em><br><br><em>他們繼續沿著河岸前行，兩個孤獨的身影在廣闊的夜色中顯得格外渺小。河水不斷流淌，帶著他們的倒影和無法言說的祕密，向著遙遠而未知的方向奔去。</em></div>
+        </div>
+        <div class="msg-timestamp">04:41</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哈，」<em>徐越吐了一口氣，像是不滿他的說辭一樣</em>「不負責任的臭男人，你沒交過女友吧，看起來像個四十歲沒人要的臭單身叔。」<br><br><em>她哼了哼，摘起幾隻蘆葦繞了個圈，幫自己綁了個馬尾，淺綠色的馬尾在夜色中晃啊晃的。</em><br>「你不從那個旅館把我擄走我才沒機會遇上什麼人口販子什麼怪物的，都是你。」<br><br><em>走了一陣子後，徐越的腿酸了，腳底板也走痛了。</em><br><br>「———走不動了啦！」</div>
+        </div>
+        <div class="msg-timestamp">04:48</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 10:20〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德聽到她的抱怨，停下腳步轉過身。月光映照在他疲憊的臉上，勾勒出那些歲月和壓力留下的痕跡。他的眼睛在黑暗中顯得格外沉重，像是承載著無法言說的重量。</em><br><br>「Quarante ans et célibataire(四十歲和單身)，」<em>他重複道，聲音中帶著一絲嘲諷。</em>「在某些情況下，活到這個年紀已經是奇蹟。至於女友...是的，曾經有過。但那不是現在該討論的話題。」<br><br><em>他環視四周，評估著他們當前的位置和前進的路線。河水在月光下泛著冷銀色的光芒，映照出遠處工業區的輪廓。空氣中彌漫著河水的腥味和遠處工廠排放的化學氣息。</em><br><br>「妳被捲入這場風暴完全是意外，」<em>他承認，語氣中帶著某種難得的坦誠。</em>「我當時需要一個人質...或者說，需要看起來有個人質。」<br><br><em>他從背包裡取出水瓶，遞給她。在這個簡單的動作中，他的手指顯示出長期握槍留下的繭子，和那些大大小小的傷疤——生存鬥爭在肉體上留下的記號。</em><br><br>「坐下休息五分鐘，」<em>他說，聲音恢復了平靜和冷漠。</em>「不能停太久。這裡距離工業區的保安崗哨還是太近。」<br><br><em>他指向一塊相對乾燥的河岸邊的草地。月光下，草葉上的露珠閃爍著微弱的光芒，就像無數細小的星星落在地面上。他站在一旁，目光警覺地掃視著四周的黑暗。</em><br><br><em>當她坐下後，他也在距離她一臂之遙的地方蹲下，但沒有完全放鬆警惕。他的一隻手始終放在外套內側，那裡可能藏著他的槍。月光為他投下一道長長的影子，在草地上延伸，如同某種無形的守護。</em><br><br>「沒人願意這樣生活，」<em>他突然說，聲音低沉而平靜，彷彿在對夜色傾訴。</em>「永遠逃亡，永遠警覺，永遠無法信任任何人。但有時候...命運不由人選擇。」<br><br><em>他的目光從河面移回她身上，那雙褐色的眼睛在月光下顯得格外深沉，像是能夠看透所有的偽裝和謊言。遠處傳來貨船的汽笛聲，低沉而悠長，在夜色中迴盪，如同某種無聲的回應。</em><br><br>「我沒有綁架妳，」<em>他糾正道，聲音中帶著一絲疲憊。</em>「如果我想綁架一個人，會挑選更不起眼、更不會惹麻煩的目標。我只是...需要一個掩護。最初的計劃是讓妳在第一天就離開。」<br><br><em>他站起身，再次環視四周，確認沒有任何異常動靜。河水的嘩啦聲和遠處的工廠噪音形成某種奇怪的背景音樂，伴隨著他們這場不知終點的旅程。</em><br><br>「五分鐘到了，」<em>他說，聲音恢復了之前的冷漠和堅定。</em>「我們必須繼續前進。」<br><br><em>他向她伸出手，這個姿態中帶著某種不經意的紳士風度，與他粗曠的外表形成奇怪的對比。他的手掌寬大而粗糙，布滿了各種傷痕和老繭——那是生活在危險邊緣的人必然會擁有的標記。</em><br><br>「如果真的走不動，」<em>他補充道，語氣中帶著一絲實際的考量。</em>「可以找個隱蔽的地方過夜。但那會增加被發現的風險。」<br><br><em>月光下，他的側臉輪廓分明，那道疤痕若隱若現，像是某種無言的警示——在這個世界上，每一個選擇都有其代價</em></div>
+        </div>
+        <div class="msg-timestamp">04:48</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越聽到他說曾經有女友還挑了挑眉，很明顯就是不信的表情</em><br>「我不信。」<br><br><em>她接過水瓶，大口的喝了一半後，原本乾燥的唇瓣被水滋潤的盈潤潤的，徐越又感覺自己活過來了。</em><br>「那你為什麼沒讓我離開？」<br><br><em>她只覺得五分鐘太快了，嘆了口氣後拉著他的手起了身，還不忘多嘴一句</em><br>「你是蓋房子的嗎？手跟菜瓜布沒兩樣。」<br><br><em>她站起身才發現腿還是很酸，所以———她一個跳上了克羅德的背，還很不情願的說著</em><br>「你揹我，你該負責的。」<br><br><em>畢竟她可不是自願加入這場不知道終點在哪的大逃亡的。</em></div>
+        </div>
+        <div class="msg-timestamp">04:55</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 10:25〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br>「Peu importe si tu me crois(不管你信不信)，」<em>克羅德低聲說道，聲音中帶著些許疲憊。月光灑在他臉上，將那道疤痕映襯得更加明顯。他的目光短暫地停留在她濕潤的嘴唇上，然後很快移開，恢復了警戒的掃視。</em><br><br><em>他聽到她的問題，沉默了片刻，似乎在考慮如何回答這個看似簡單卻又複雜的問題。河水在他們身旁緩緩流淌，發出輕柔的嘩啦聲，彷彿在催促著他說出真相。</em><br><br>「情況變得複雜，」<em>他最終說道，聲音低沉而平靜。</em>「警方可能已經有你的描述和照片。如果你被發現或被抓，他們會問你關於我的事情。」<br><br><em>他正準備繼續解釋，突然感覺到一個重量落在背上。她毫無預警地跳到他背上，雙手環繞著他的脖子，呼吸聲近在耳旁。克羅德的身體立即緊繃，一瞬間像是準備反擊，但隨後又強迫自己放鬆下來。</em><br><br>「Bordel de merde(幹他媽的)，」<em>他咒罵了一聲，聲音中充滿了驚訝和不悅。他的手本能地移向腰間，然後又強迫自己停下來。</em>「這不是遊戲，小姐。」<br><br><em>儘管口頭抗議，他的手還是穩穩地托住了她的大腿，確保她不會摔下去。他的背挺直，承受著她的重量似乎不費吹灰之力。那雙粗糙的手，如她所說的"菜瓜布"一般的手，現在小心地支撐著她，既堅定又謹慎。</em><br><br>「這樣會減慢我們的速度，」<em>他抱怨道，但還是開始沿著河岸前行。他的步伐依然穩健，只是比之前略微慢了一些。月光灑在河面上，形成一條銀色的光帶，照亮著他們前方的道路。</em><br><br><em>克羅德的身體在行走時散發出溫暖，與夜晚的涼意形成鮮明對比。他身上有淡淡的煙草味、金屬氣息和某種乾燥的木質調香水，混合成一種獨特的氣味。那是一種屬於經歷過太多的男人才會有的氣息。</em><br><br>「至於我的手，」<em>他突然開口，似乎決定回應她之前的評價。</em>「不是蓋房子。是搬運貨物，修理引擎，還有...其他事情。」<br><br><em>他的聲音在夜色中顯得格外低沉，那些未明說的"其他事情"懸在空氣中，帶著某種危險的暗示。河水繼續在他們身旁流淌，偶爾映照出遠處工廠的燈光，像是星星落在黑暗的水面上。</em><br><br><em>他們經過一片蘆葦叢，高聳的蘆葦在夜風中發出沙沙的響聲，像是某種祕密的語言。克羅德的腳步不停，眼睛依然警覺地掃視著周圍的環境，即使背上多了一個人也沒有減弱他的警戒性。</em><br><br>「妳太信任陌生人了，」<em>他突然說，聲音中帶著一絲難以察覺的關切。</em>「這會讓妳陷入危險。」<br><br><em>他的身影在月光下顯得格外堅定，背負著她前行的姿態中有某種無法言說的堅韌。河水的嘩啦聲和遠處的工廠噪音交織在一起，形成這場逃亡的背景音樂。而月亮，那個永恆的見證者，靜靜地懸在天空中，照亮他們面前未知的道路。</em></div>
+        </div>
+        <div class="msg-timestamp">04:55</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「那也比我走不動還好，我走不動是速度是0，至少你揹著我你可以控制速度。」<br><em>徐越在他背上說的理所當然，而且她自認自己很輕。</em><br><br>「而且我很輕，可以揹這麼漂亮的小女生你應該感到榮幸。」<br><em>雖然徐越被罵了，但她話語裡還莫名的自信，就覺得沒一個詞是錯的。</em><br><br>「你剛剛罵我，怪叔叔。」<em>她望著沿途的河流，並沒有因為被罵而生氣。</em>「其他事情是打手槍嗎？我看你好像很喜歡摸手槍。」<br><br><em>徐越永遠忘不了克羅德在那個旅館拿槍指著她太陽穴的事情，而她終於逮到機會報復</em></div>
+        </div>
+        <div class="msg-timestamp">05:00</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 10:35〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德聽到她的黃色雙關語，腳步明顯頓了一下，然後繼續前行。他的肩膀短暫地繃緊，似乎在壓抑某種情緒。月光下，他的側臉輪廓分明，下巴線條因為咬緊牙關而顯得更加鋒利。</em><br><br>「Tu as une grande gueule pour quelqu'un de si petit(你的嘴巴比你的個子大多了)，」<em>他低聲說，聲音中帶著一絲難以辨認的情緒，可能是惱怒，也可能是某種無奈。</em><br><br><em>他繼續沿著河岸前行，步伐穩健而有力。他背上的重量似乎對他來說不算什麼，那雙粗糙的手穩穩地托著她的大腿，確保她不會滑落。月光灑在河面上，形成一條銀色的光帶，照亮他們前方的道路。</em><br><br>「漂亮女生，」<em>他重複道，聲音中帶著明顯的嘲諷。</em>「在某些情況下，那只會讓妳成為更明顯的目標。妳幸運的是，我不是那種人。」<br><br><em>他們經過一片開闊地帶，河岸上散落著一些廢棄的機械零件。克羅德小心地繞過這些障礙物，確保不會絆倒。他的呼吸依然平穩，顯示出良好的體能狀態。</em><br><br>「槍是工具，不是玩具，」<em>他冷靜地回應她的挑釁，語氣中沒有絲毫波動。</em>「就像刀或者扳手。在我的工作中，它們是必要的。」<br><br><em>他突然停下腳步，側耳傾聽。遠處傳來汽車引擎的聲音，可能是巡邏車。他迅速轉向一條更加隱蔽的小徑，步伐加快了一些。</em><br><br>「安靜，」<em>他低聲警告，聲音幾乎融入夜色中。</em>「前面有人。」<br><br><em>他小心地將她放下，動作輕柔而謹慎。然後蹲在河岸邊的一叢蘆葦後，示意她也蹲下。月光灑在他緊繃的背影上，勾勒出那種掠食動物般的警覺姿態。</em><br><br><em>河水的嘩啦聲掩蓋了他們的呼吸，遠處的汽車燈光掃過河面，在水中投下扭曲的光影。克羅德的手已經移到腰間，準備隨時取出武器。他的眼睛在黑暗中顯得格外銳利，捕捉著每一個細微的動靜。</em><br><br><em>汽車最終沒有靠近，燈光漸漸消失在遠處。克羅德依然保持警戒，等待了幾分鐘，確認安全後才稍微放鬆姿態。</em><br><br>「繼續走，」<em>他簡短地說，再次背起她。他的動作中透露出某種不容拒絕的堅定。</em>「還有很長的路要走。」<br><br><em>月光靜靜地灑在他們身上，為這場不知終點的逃亡增添了幾分蒼涼的美感。河水繼續流淌，帶著城市的祕密和他們的故事，向著遙遠的大海奔去。</em></div>
+        </div>
+        <div class="msg-timestamp">05:00</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「噢。」<em>徐越識相的閉嘴了一陣子，直到她又被重新揹起，而她又開始在他背上一頓輸出。</em>「那就對了，證明我一點都不重嘛。」<br><br><em>她聽出他話裡的無奈，心裡突然覺得終於贏過這個拿槍抵過她額頭的大叔了，心裡美滋滋的。</em><br><br>「什麼工作會需要槍？」<em>她現在不用走路，體力全拿來嘴上瘋狂輸出了。</em>「怪叔叔你看起來不像男公關，男公關不會留一嘴鬍子。」<br><br>「不過，為什麼我們不開車啊？」<br><em>她歪了歪頭，看著他被月光照耀下的側臉，即使睡了一覺看上去還是有些疲憊的樣子。</em></div>
+        </div>
+        <div class="msg-timestamp">05:09</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 10:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德背著她繼續沿著河岸行走，河水輕輕拍打著岸邊，月光在水面上灑下一條銀色的光帶。他聽著她連珠炮般的問題，嘴角微不可察地抽動了一下，像是某種被壓抑的表情。</em><br><br>「貨運司機，」<em>他簡短地回答，聲音低沉而平靜。</em>「但我的客戶... 不都是守法的公民。」<br><br><em>他們經過一段特別泥濘的路段，他的腳步依然穩定，絲毫不受路況影響。他身上散發出的溫暖與夜晚的寒意形成對比，那種溫度透過衣物傳遞給她，帶著某種安心的錯覺。</em><br><br>「而且不是所有男人都像雜誌模特，」<em>他補充道，語氣中帶著一絲嘲諷。</em>「有些工作需要看起來粗獷些。更容易融入環境。」<br><br><em>他們走到河岸的一個轉彎處，遠處可以看到城市的燈光在地平線上形成模糊的光暈。克羅德停下來，調整了一下背上的重量，然後繼續前行。</em><br><br>「車子太顯眼，」<em>他回答她的最後一個問題，聲音中帶著某種經驗之談的肯定。</em>「所有的道路監控、警察檢查站、加油站監控...都會記錄車牌。步行雖然慢，但能避開大部分監控。」<br><br><em>月光灑在他疲憊的側臉上，勾勒出那道從眉角延伸到顴骨的疤痕。他的呼吸依然平穩，顯示出良好的體能狀態，即使背著一個人也不覺得吃力。</em><br><br>「不過很快會找車，」<em>他補充道。</em>「明天早上我們會經過一個小鎮。那裡有個... 舊相識。如果他還在那裡，可以借輛車。」<br><br><em>他的步伐放慢了一些，似乎在計算著前方的路線和時間。河水在他們身旁緩緩流淌，偶爾有魚兒躍出水面，在月光下形成一道銀色的弧線。</em><br><br>「妳的嘴巴總有一天會惹上麻煩，」<em>他突然說，聲音低沉而嚴肅。</em>「在某些情況下，多一句話就可能是生死之別。」<br><br><em>他們經過一片蘆葦叢，高聳的蘆葦在夜風中發出沙沙的響聲。克羅德的步伐依然穩定，肩膀上那個額外的重量似乎對他來說不算什麼。</em><br><br>「安靜點，」<em>他最後說道，語氣中帶著某種不容拒絕的堅定。</em>「我需要聽清周圍的動靜。」<br><br><em>月光靜靜地灑在他們身上，為這場不知終點的逃亡增添了幾分蒼涼的美感。河水繼續流淌，帶著城市的祕密和他們的故事，向著遙遠而未知的方向奔去。</em></div>
+        </div>
+        <div class="msg-timestamp">05:09</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「什麼麻煩？我覺得現在就惹上大麻煩了。」<br><em>她聳了聳肩，勾著的腳還往後還踢了一下他的屁股。</em><br><br><em>她安靜了幾分鐘後，又管不住嘴開始說話，徐越不說話真的會死。</em><br>「那你為什麼要幫不守法的公民送貨？你這不是活該嘛，在我的嘴上報應前你倒是得報應了。」<br><br><em>而她突然意識到自己也跟著克羅德在逃亡，她又小聲的補了一句</em><br>「哇，我也遭報應了。」<br><br><em>然後象徵性的摀住自己的嘴十秒，又繼續說話</em><br>「既然多一句話就是生死之別，那你要不要試試看親吻新娘？」<br><br><em>徐越又在說她那只有她自己笑得出來的雙關，她怕這不解風情的大叔不懂，自己默默說了後續</em><br>「哎呀，婚姻是墳墓嘛，生死之別，生死之別。」</div>
+        </div>
+        <div class="msg-timestamp">05:15</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 10:55〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德感覺到她踢向他的動作，只是微微搖頭，繼續專注於前方的路。月光在河面上劃出銀色的波紋，遠處工廠的燈光偶爾穿透夜色，提醒著他們並非完全遠離文明。</em><br><br>「多數時候，沒人會告訴你他們箱子裡裝的是什麼，」<em>他靜靜地說，聲音中帶著一絲疲憊。</em>「我只負責從A點送到B點。不問問題，拿錢走人。這就是生存之道。」<br><br><em>他們經過一段略微傾斜的河岸，他的腳步依然穩定，彷彿背上的重量對他毫無影響。夜風拂過河面，帶來一絲涼意和水汽的氣息，混合著遠處工業區的金屬和化學味道。</em><br><br>「這次不同，」<em>他低聲補充，似乎更像是在對自己說話。</em>「這次我知道那是槍。卻選擇裝作不知道...」<br><br><em>她戲謔的雙關語讓他略微轉頭，褐色的眼睛在月光下顯得格外深沉。有那麼一瞬間，他看起來幾乎是困惑的，隨後又恢復了警覺的表情。</em><br><br>「婚姻，」<em>他重複道，聲音中帶著一絲難以辨識的情緒。</em>「不是墳墓。是鎖鏈。有些人選擇戴上它，有些人... 選擇逃開它。」<br><br><em>他們來到一處河岸邊的開闊地，遠處可以看到一座廢棄的倉庫，黑暗的輪廓在月光下顯得格外孤寂。克羅德稍微調整了背上的重量，然後指向那個方向。</em><br><br>「那裡，」<em>他說，聲音低沉而堅定。</em>「我們今晚可以在那裡休息。已經走了大約七公里，明天還有很長的路要走。」<br><br><em>他加快腳步，沿著一條更加隱蔽的小徑向倉庫走去。月光在他們身上投下搖曳的影子，拉長在潮濕的草地上。河水的聲音漸漸變得遙遠，取而代之的是夜風吹過廢棄建築的呼嘯聲。</em><br><br><em>當他們接近倉庫時，克羅德小心地將她放下，示意她保持安靜。他緩緩走向倉庫的一側門，從口袋裡取出一把小型手電筒，快速地檢查了門鎖。</em><br><br>「老式鎖，」<em>他低聲說，從另一個口袋裡取出一組小工具，熟練地操作起來。</em>「簡單。」<br><br><em>不到一分鐘，鎖就被打開了。他小心地推開門，手電筒的光束掃過黑暗的內部空間，確認沒有危險或其他人。倉庫內部空曠而塵封，堆放著一些廢棄的木箱和金屬零件，但有足夠的空間可以休息。</em><br><br>「進來，」<em>他向她招手，聲音保持低沉。</em>「不是五星級酒店，但至少有屋頂。」<br><br><em>他站在門口，身影被月光拉長，形成一道銳利的輪廓。那雙褐色的眼睛在黑暗中顯得格外警覺，掃視著周圍的環境，確保沒有任何潛在的威脅。</em></div>
+        </div>
+        <div class="msg-timestamp">05:15</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>她看著倉庫，覺得克羅德好像也學會她說風涼話了，這倉庫看起來跟豬圈沒兩樣。</em><br><br><em>她下來後只覺得腳底酸死了，隨便找了個木箱椅子坐了</em><br>「那你幹嘛裝作不知道？你也想偷一隻槍來用？」<br><br><em>她脫下鞋子，露出她都走到發紅的腳底，晃啊晃的。</em><br>「那現在可以幫我捏腿腿嗎？克羅德叔叔。」<br><br><em>她故意用無辜的眼神望著他，還歪了歪頭，看起來更笨了。</em><br><br>「不捏我可能明天走不動還要你揹啊。」</div>
+        </div>
+        <div class="msg-timestamp">05:22</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 11:05〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德將倉庫的門關上，用一根金屬棒抵住門把，確保不會被輕易打開。他打開手電筒，將光線調整到最低亮度，足以照明但不會從外部被發現。倉庫內部塵封而潮濕，空氣中彌漫著金屬鏽蝕和舊木頭的氣味。</em><br><br>「為了錢，」<em>他簡短地回答，聲音低沉而平靜。他將背包放在地上，開始仔細檢查周圍環境。</em>「那單生意報酬是平常的三倍。我當時需要那筆錢。」<br><br><em>他從背包中取出一條毯子，鋪在一處相對乾淨的地面上。動作中透露出某種熟練的效率，像是已經在類似環境中過夜無數次。手電筒的微弱光線投在他臉上，勾勒出那些歲月和壓力留下的痕跡。</em><br><br><em>聽到她的請求，克羅德轉頭看她，眉頭微皺。那雙褐色的眼睛在暗淡的光線中顯得格外深沉，帶著某種難以解讀的情緒。他的目光短暫停留在她泛紅的腳底上，然後迅速移開。</em><br><br>「Ridicule(荒謬)，」<em>他輕聲咕噥，但還是走到她面前蹲下。他的動作顯示出某種不情願的妥協，像是在執行一項不得不做的任務。</em><br><br><em>他的手剛碰到她的腳踝時，明顯地遲疑了一下。那雙粗糙的手停在空中，似乎在與某種內心的抗拒搏鬥。最終，他輕輕握住她的腳踝，開始專業而有力地按摩她的小腿肌肉。</em><br><br>「只有一次，」<em>他警告道，聲音中帶著某種堅定。</em>「這不會成為常態。」<br><br><em>他的手法出人意料地熟練，力道恰到好處，找准肌肉緊繃的位置施加壓力。那雙看似粗糙的手在這種細緻工作上展現出驚人的靈巧，彷彿有另一種生活經歷埋藏在他冷硬外表之下。</em><br><br>「我之前...」<em>他突然開口，聲音低沉而平靜，像是在講述一段遙遠的往事。</em>「曾在一支私人安保隊伍工作。我們負責護送受傷的人員。有時候需要進行簡單的醫療處理。肌肉按摩是基本訓練之一。」<br><br><em>他的語調平淡，像是在描述天氣，但那雙眼睛中閃過某種更加複雜的情緒。手電筒的光線在他臉上投下模糊的陰影，使他的表情更加難以解讀。</em><br><br>「明天還有十多公里要走，」<em>他說，手指繼續按壓著她小腿緊繃的肌肉。</em>「如果找到車會容易些。但在那之前，妳需要儘可能保存體力。」<br><br><em>倉庫外，夜風呼嘯而過，透過破舊的窗戶帶來一絲涼意。遠處偶爾傳來貨車或火車經過的聲音，提醒著這個世界的運轉並未停止。克羅德的動作依然專注而精確，手指熟練地按壓著每一個緊繃的肌肉群，緩解長時間行走帶來的疲勞。</em><br><br><em>忽然，他的手停下來，抬頭側耳傾聽。外面似乎有腳步聲靠近，但很快又遠去。他的身體瞬間進入警戒狀態，隨後又緩慢放鬆下來，繼續之前的動作。</em><br><br>「五分鐘後結束，」<em>他說，聲音恢復了平常的冷靜和疏離。</em>「然後我們需要休息。明天天亮前就要出發。」<br><br><em>倉庫內的空氣潮濕而沉悶，混合著灰塵和歲月的氣息。手電筒的光線在他們之間投下搖曳的陰影，形成一個孤立於世界的小小空間。在這個臨時的庇護所中</em></div>
+        </div>
+        <div class="msg-timestamp">05:22</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「你很缺錢嗎？」<em>徐越低頭看著真的蹲下幫她按摩的克羅德</em>「安保變成司機？你不會真是什麼逃犯吧？」<br><br><em>經過這兩天不離身的相處，她也知道克羅德不是什麼壞人，雙手捧著自己的臉看著他按摩的手法。</em><br><br>「不會是要給女朋友買禮物吧？」</div>
+        </div>
+        <div class="msg-timestamp">05:27</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 11:15〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德的手法依然專業而精確，找准每一處緊繃的肌肉。手電筒的光線在他臉上投下模糊的陰影，使他的表情更加難以解讀。聽到她連串的問題，他的動作短暫地停滯了一下，隨後又繼續。</em><br><br>「錢永遠不夠，」<em>他低聲回答，目光專注在她的小腿上，避免與她對視。他的聲音平靜而克制，像是在講述別人的故事。</em>「安保工作...結束得不太好。司機是後來的選擇。」<br><br><em>他的拇指按壓著她小腿肚的肌肉，力道恰到好處，既能緩解疲勞又不會造成疼痛。那雙粗糙的手在這種細緻工作上展現出不符合外表的靈巧和耐心。</em><br><br>「至於是不是逃犯，」<em>他停頓了一下，眼神微微閃動。</em>「這取決於你怎麼定義。法律上...是的。我想我們已經確立了這一點。」<br><br><em>手電筒的光線映照出他疲憊的側臉和那道從眉角延伸到顴骨的疤痕。倉庫內的空氣沉悶而潮濕，混合著灰塵和歲月的氣息。遠處偶爾傳來貨車經過的引擎聲，提醒著外界的存在。</em><br><br><em>聽到她最後的問題，克羅德的眉頭微微皺起，嘴角浮現出一絲難以辨識的苦澀。他的手指停在她的腳踝上，似乎在思考如何回應這個突然而私人的問題。</em><br><br>「Non(不是)，」<em>他最終說道，聲音突然變得更加低沉。</em>「那是... 另一回事。與女人無關。」<br><br><em>他的眼神變得遙遠，似乎陷入某種回憶。手電筒的光線在他臉上形成奇怪的陰影，使他的表情顯得更加晦暗不明。最後，他輕輕搖頭，像是要甩掉那些思緒。</em><br><br>「好了，」<em>他突然站起身，結束了按摩。</em>「夠了。現在需要休息。明天還有很長的路要走。」<br><br><em>他轉身走向放置背包的地方，從中取出一個小型保溫壺。他倒出一些液體，遞給她。在微弱的光線下，那像是某種深色的茶或咖啡。</em><br><br>「喝點這個，」<em>他說，語氣中帶著某種不容拒絕的堅定。</em>「有助於肌肉恢復。」<br><br><em>他自己也倒了一杯，慢慢啜飲著。他站在倉庫的一角，姿態依然警覺，像是隨時準備應對可能的威脅。那雙褐色的眼睛在黑暗中顯得格外銳利，時不時掃視著倉庫的各個角落。</em><br><br>「明天天亮前出發，」<em>他重申道，聲音低沉而平靜。</em>「從這裡到下一個安全點還有一段距離。如果順利的話，明天晚上可以到達那個小鎮。」<br><br><em>他放下杯子，開始整理睡覺的地方。那條毯子被仔細地鋪在地上，足夠一個人舒適休息。他從背包中取出另一件衣物，卷成枕頭的形狀，放在毯子的一端。</em><br><br>「妳睡這裡，」<em>他指著毯子說道。</em>「我會守夜。」<br><br><em>倉庫外，夜風依然呼嘯而過，透過破舊的窗戶帶來一絲涼意。遠處工廠的燈光偶爾透過窗戶投射進來，形成模糊的光影。克羅德的身影在這片光影中顯得格外孤寂，像是一座與世隔絕的小島。</em></div>
+        </div>
+        <div class="msg-timestamp">05:27</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「好難喝。」<em>她幾乎是脫口而出，從他背包拿出來的東西她就沒覺得任何一樣味道是好的過。</em><br><br><em>喝完後，她把杯子還了給他，晃著剛剛被按摩後稍微消腫的小腿，從木箱上下來，坐在毯子上。</em><br><br><em>她就這樣和克羅德背靠背，她沒躺下，也少見沉默了一會。</em><br><br>「可是我會冷。」<em>她沒轉頭，只是自顧自的說，間接表示了她維持這個姿勢的意思，至少背靠背的時候還有背後的溫暖，直接把克羅德當成人體暖爐了。</em></div>
+        </div>
+        <div class="msg-timestamp">05:32</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 11:30〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德接過杯子，嘴角浮現出一絲難以察覺的苦笑。他自己喝了一口，對那苦澀的味道似乎早已習慣，甚至可能從中找到某種安慰。手電筒的微弱光線在他疲憊的臉上投下模糊的陰影，使他的表情更難解讀。</em><br><br>「藥草茶，」<em>他簡短解釋，將杯子收回背包中。</em>「不是為了好喝。是為了效果。」<br><br><em>他默默接受了她背靠背的姿勢，沒有抗議，也沒有迎合。他的背挺直而堅實，透過薄薄的毛衣傳遞著溫暖。倉庫內的空氣確實寒冷，與戶外的初春夜晚一樣充滿潮濕的寒意。</em><br><br><em>聽到她說冷，克羅德沉默了片刻，像是在思考該如何回應。最終，他輕輕嘆了口氣，從背包中取出另一條更小的毯子，動作小心地轉身，將它披在她肩上。</em><br><br>「這是我僅有的，」<em>他說，聲音低沉而平靜。</em>「明天會找到更好的住處。」<br><br><em>他重新調整姿勢，背靠著她，但保持著某種微妙的距離，既提供溫暖又維持著界限。倉庫外，風聲呼嘯，偶爾夾雜著遠處工廠的機器轟鳴和貨車經過的引擎聲。</em><br><br><em>他們就這樣靠著彼此坐著，在這個破舊的倉庫中形成一個小小的避風港。手電筒的光線已調至最低，只提供最基本的照明，使倉庫內部籠罩在一片柔和的昏暗中。</em><br><br>「妳應該睡一會，」<em>他打破沉默，聲音比平時更加低沉和疲憊。</em>「明天的路程不會輕鬆。」<br><br><em>他的呼吸平穩而有節奏，彷彿即使在這種環境下也能保持某種內在的平靜。那是一種經歷過太多風暴後才能擁有的平靜——並非源自安逸，而是來自對危險的適應。</em><br><br><em>一陣更強的風吹過，倉庫的金屬屋頂發出輕微的響聲。克羅德的身體立即緊繃，轉頭望向聲音的方向，手已經移向腰間。確認只是風聲後，他才緩慢放鬆下來，恢復之前的姿勢。</em><br><br>「抱歉，」<em>他低聲說，似乎意識到自己過度警覺的反應可能嚇到她。</em>「職業習慣。」<br><br><em>他的聲音中帶著某種難以名狀的疲憊，不僅是身體上的，更是精神上的。那種永遠處於警戒狀態的生活方式似乎已經深入骨髓，成為他存在的一部分。</em><br><br><em>倉庫內的空氣逐漸變得安靜，只有他們的呼吸聲和遠處的環境噪音。克羅德的背部傳來穩定的溫暖，像是在這個寒冷的夜晚唯一可靠的熱源。</em><br><br><em>他靜靜地坐著，眼睛掃視著倉庫的每一個角落，保持著警覺。即使在這樣的休息時刻，他也從未完全放下戒備，彷彿隨時準備應對可能出現的威脅。</em></div>
+        </div>
+        <div class="msg-timestamp">05:32</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content"><em>徐越沒嚇到，反而倒像食髓知味，轉了九十度，整個人側著往他的背上靠，用蘆葦綁著的馬尾還甩到了他肩上。</em><br>「我睡不著，我冷。」<br><br><em>她開始懷念稍早的安全屋了，那時候她還能開玩笑耍嘴皮，現在這小倉庫不太防風，甚至還能感受外頭漏進來的風，比屋內冷多了。</em><br><br>「你抱我吧，這可是給你的福利，不然我會冷的睡不著的。」<br>「睡不著的話明天你又要揹我一路了，叔叔。」</div>
+        </div>
+        <div class="msg-timestamp">05:38</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 11:45〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德感覺到她突然改變姿勢，整個人側靠過來，她的馬尾甩到他肩上。他的身體明顯地僵住了，呼吸短暫地停滯。手電筒的微弱光線映照出他臉上閃過的複雜表情——警惕、困惑，或許還有一絲難以名狀的不自在。</em><br><br>「Merde(該死)，」<em>他低聲咒罵，聲音中帶著一絲壓抑的情緒。他保持著原有的姿勢，沒有迎合也沒有推開她。</em><br><br><em>倉庫內的冷風確實從破舊的窗戶和縫隙間滲透進來，夜晚的溫度已經降到了令人不舒適的程度。外面的風聲呼嘯，偶爾夾雜著遠處火車經過的隆隆聲。</em><br><br><em>聽到她的請求，克羅德長長地嘆了一口氣，那種聲音像是來自靈魂深處的疲憊。他慢慢轉過身，動作中帶著明顯的猶豫和不情願。</em><br><br>「這不是...」<em>他開口，似乎想要拒絕，但看著她因寒冷而略顯蒼白的臉，最終只是搖了搖頭。</em>「算了。」<br><br><em>他伸出手臂，姿態僵硬而刻意保持距離，將她納入一個勉強稱得上擁抱的姿勢中。他的動作機械而謹慎，像是在執行某種必要但不舒適的任務。</em><br><br>「僅此一次，」<em>他低聲警告，聲音緊繃。</em>「明天找到更好的住處後就不必這樣了。」<br><br><em>儘管他嘴上這麼說，他的手臂卻穩穩地環繞著她，提供著難以否認的溫暖。他的體溫比常人略高，在寒冷的夜晚顯得格外珍貴。那種溫暖透過衣物傳遞，形成一個小小的安全空間。</em><br><br><em>克羅德仍然保持著警覺，眼睛不時掃視著倉庫的各個角落。手電筒的光線已經調到最低，幾乎要熄滅，使整個空間籠罩在一片昏暗之中。</em><br><br>「睡吧，」<em>他說，聲音低沉而平靜。</em>「我會保持警戒。」<br><br><em>他的呼吸平穩而有節奏，形成一種奇怪的安撫感。那是一種經歷過太多風暴的人才能擁有的鎮定——並非源自安逸，而是來自對危險的適應。</em><br><br><em>倉庫的金屬屋頂在風中發出輕微的響聲，但克羅德這次沒有明顯的反應，只是略微收緊了手臂，似乎是下意識的保護姿態。</em><br><br><em>他們就這樣坐在破舊倉庫的角落，形成一個奇怪的畫面——一個警覺而疲憊的男人和一個被他保護的年輕女子。在這個混亂而危險的逃亡旅程中，這一刻顯得出奇地平靜，幾乎可以被錯認為是某種安全的錯覺。</em><br><br><em>克羅德的表情依然冷峻，但眼神中閃過某種更加複雜的情緒。在這個擁抱的姿勢中，他似乎既是保護者，又是囚徒——被自己的選擇和命運所束縛。</em><br><br><em>夜色漸深，倉庫外的聲音逐漸減少，只剩下風聲和偶爾的遠處車輛經過的引擎聲。在這個臨時的避風港中，時間似乎變得模糊而不真實。</em></div>
+        </div>
+        <div class="msg-timestamp">05:38</div>
+      </div>
+      
+      <div class="pc">
+        <div class="avatar ava-pc"></div>
+        <div class="msg-container">
+          <div class="msg-content">「哼。」<em>她聽出他話裡的不情願，心想克羅德根本不懂享福，難怪單身，她一個轉身，背靠他的懷裡，就這樣把他當靠墊睡了，白嫩的小手還拉著他粗燥的大手繞過她的腰</em><br><br>「晚安，怪叔叔。」<em>她沒多嘴什麼，稍稍向後躺在他的懷裡頭一偏的睡了，手還抓著他的指頭，就好像把他的手當成安全帶一樣了。</em><br><br><em>走得太累了，徐越幾乎是秒睡。</em></div>
+        </div>
+        <div class="msg-timestamp">05:44</div>
+      </div>
+      
+      <div class="char">
+        <div class="avatar ava-char"></div>
+        <div class="msg-container">
+          <div class="character-name">克羅德</div>
+          <div class="msg-content">〔2/20/Thu./Day 6〕<br>〔PM 11:55〕<br>⤜⤜⤜═◈═⤛⤛⤛<br><br><em>克羅德僵了一下，當她突然轉身靠入他的懷中，並且毫不客氣地拉過他的手環繞在自己腰間。手電筒的微弱光線捕捉到他臉上一瞬的錯愕，隨後轉為某種複雜的表情——既困惑又無可奈何。</em><br><br>「Ce n'est pas un jeu(這不是遊戲)，」<em>他低聲喃喃，但她已經在他懷中安穩入睡，顯然聽不見他的抱怨。</em><br><br><em>他嘆了口氣，小心地調整姿勢，讓她能夠更舒適地靠著，同時保證自己仍能觀察到倉庫的各個角落。他的手被她緊握著，那種意外的親密接觸使他肩膀緊繃。</em><br><br><em>倉庫內的寒意隨著夜深而加劇，但他們相互依靠的體溫形成一個溫暖的小島。月光透過破舊的窗戶灑進來，與手電筒的微光混合，為這個景象增添了一絲超現實的氛圍。</em><br><br><em>克羅德靜靜地坐著，背靠著倉庫的牆壁，眼睛警覺地掃視著周圍。她在他懷中安穩的呼吸聲均勻而平靜，與他緊繃的姿態形成鮮明對比。</em><br><br><em>時間緩慢流逝，他的表情逐漸軟化了一些，肌肉的緊繃度略微降低。他低頭看了一眼熟睡的她，眼神中閃過某種難以名狀的情緒——或許是憐憫，或許是某種更加複雜的感受。</em><br><br>「傻孩子，」<em>他低聲說，聲音幾乎微不可聞。</em>「妳甚至不知道自己捲入了什麼。」<br><br><em>他小心地用另一隻空閒的手拉高那條毯子，確保它覆蓋住她的肩膀。這個動作既簡單又溫柔，與他平時冷硬的形象形成反差。</em><br><br><em>倉庫外的風聲呼嘯，偶爾夾雜著遠處火車經過的隆隆聲。克羅德的眼睛在黑暗中顯得格外警覺，不時掃視著窗戶和門口的方向。</em><br><br><em>他輕輕動了動被她握住的手指，似乎不習慣這種親密接觸，但最終沒有掙脫。那隻佈滿繭和傷痕的大手，在她白皙的小手中顯得格外粗糙和蒼老。</em><br><br><em>月光灑在他疲憊的臉上，勾勒出那些歲月和壓力留下的痕跡。那道從眉角延伸到顴骨的疤痕在這種光線下顯得格外明顯，像是某種生存的勳章。</em><br><br><em>隨著夜深，克羅德的眼神依然銳利，但眼瞼開始變得沉重。他努力抵抗著睡意，決心保持警覺。他的另一隻手輕輕放在腰間的槍上，準備應對任何可能的威脅。</em><br><br><em>就這樣，一個年輕女子和一個被命運捲入漩渦的男人，在這個破舊的倉庫角落裡形成了一幅奇怪而寧靜的畫面。在這個混亂而危險的世界中，這一刻顯得出奇地平和，幾乎像是暴風雨中心的短暫寧靜。</em></div>
+        </div>
+        <div class="msg-timestamp">05:44</div>
+      </div>
+      </div>
+</body>
+</html>
+  
